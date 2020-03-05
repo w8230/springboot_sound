@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="context-path" th:content="@{/}"/>
+    
+    <title>사운드 방음문 | MES</title>
+    
+    <th:block th:include="common/include-css"></th:block>
+    <th:block th:include="common/include-js">
+        <script src="js/ui.js"></script>
+    </th:block>
+</head>
+<body class="page-body" data-url="http://neon.dev">
+    <div th:replace="common/mid-menu"></div>
+    <div class="page-container">
+        <div th:replace="common/common-sidebar"></div>
+        <div class="main-content">
+            <div th:replace="content/home"></div>
+            <div th:replace="common/common-footer"></div>
+        </div>
+    </div>
+</body>
+</html>
