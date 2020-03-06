@@ -1,3 +1,40 @@
+<script>
+	$(window).on('resize.jqGrid', function () {
+		$("#jqGrid").jqGrid('setGridWidth', $("#content").width());
+	});
+	function get_btn(page) {
+	    $("#jqGrid").setGridParam({ // 그리드 조회
+	        url: '/sysDeptGet',
+	        datatype: "json",
+	        page: page
+	    }).trigger("reloadGrid");
+	}
+	$(document).ready(function () {
+		$("#jqGrid").jqGrid({
+			 	datatype: "local",
+		        mtype: 'POST',
+		        colNames : ['부서코드','부서명','사용유무','등록자','등록일'],
+		        colModel : [
+		            {name:'dept_code',index:'dept_code',key: true ,sortable: false,width:100},
+		            {name:'dept_name',index:'dept_name',sortable: false,width:200},
+		            {name:'use_yn',index:'use_yn',sortable: false,width:100},
+		            {name:'user_name',index:'user_name',sortable: false,width:150},
+		            {name:'update_date',index:'update_date',sortable: false,width:180}
+		        ],
+		        caption: "권한그룹관리 | MES",
+		        height: 600,
+		        pager: '#jqGridPager',
+		        jsonReader: {cell: ""},
+		        rowNum: 100,
+		        rowList: [100, 200, 300, 400],
+		        viewrecords: true,
+		        multiselect: true
+		});
+		
+		
+	});
+</script>
+
 <div class="col-md-12 col-xs-12 breadcrumb1">
 	<div class="col-md-6 col-xs-6 hidden-xs">
 		<div>
@@ -39,7 +76,7 @@
 	</div>
 </div>
 <div class="btngrp">
-	<a href="#" class="btn btn-primary btn-xs">
+	<a href="#" class="btn btn-primary btn-xs" onclick="get_btn(1);">
 		<i class="entypo-search"></i>
 		조회
 	</a>
@@ -55,35 +92,7 @@
 
 <table id="jqGrid"></table>
 <div id="jqGridPager"></div>
-<script>
-	$(window).on('resize.jqGrid', function () {
-		$("#jqGrid").jqGrid('setGridWidth', $("#content").width());
-	});
 
-	$(document).ready(function () {
-		var rowNum = 20;
-		$("#jqGrid").jqGrid({
-			url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
-			colModel: [
-				{ label: 'OrderID', name: 'OrderID', key: true, width: 75 },
-				{ label: 'Customer ID', name: 'CustomerID', width: 150 },
-				{ label: 'Order Date', name: 'OrderDate', width: 150 },
-				{ label: 'Freight', name: 'Freight', width: 150 },
-				{ label: 'Ship Name', name: 'ShipName', width: 150 }
-			],
-			rowNum: rowNum,
-			mtype: "POST",
-			datatype: "json",
-			viewrecords: true,
-			height: 500,
-			caption: "기초정보관리",
-			pager: "#jqGridPager",
-			loadComplete: function (data) {
-
-			}
-		});
-	});
-</script>
 
 <div class="modal fade in" id="modal-6">
 	<div class="modal-dialog">
