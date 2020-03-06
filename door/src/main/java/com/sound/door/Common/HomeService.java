@@ -13,8 +13,9 @@ public class HomeService{
 
 	@Autowired
 	private TestMapper testMapper;
-	
+	  
 	public List<SYSDept> sysDeptGet() {
+		
 		return testMapper.sysDeptGet();
 	}
 
