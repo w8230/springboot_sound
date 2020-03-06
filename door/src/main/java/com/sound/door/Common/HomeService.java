@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.sound.door.Common;
 
 import java.util.List;
@@ -44,4 +43,3 @@ public class HomeService{
 
 
 }
->>>>>>> branch 'master' of https://github.com/w8230/w_sound.git

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.sound.door.Common;
 
 
@@ -40,4 +39,3 @@ public class HomeRestController {
 	    }
 	  
 }
->>>>>>> branch 'master' of https://github.com/w8230/w_sound.git

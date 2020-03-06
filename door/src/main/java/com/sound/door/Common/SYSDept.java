@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.sound.door.Common;
 
 import lombok.Data;
@@ -36,4 +35,3 @@ public class SYSDept {
 	private int rec_count;
 	private String keyword;
 }
->>>>>>> branch 'master' of https://github.com/w8230/w_sound.git
