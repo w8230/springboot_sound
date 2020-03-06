@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2020-03-06 07:34:36 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-P8JQQNA with PID 4488 (C:\Users\USER\git\w_sound\door\bin\main started by USER in C:\Users\USER\git\w_sound\door)
 2020-03-06 07:34:36 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
 2020-03-06 07:34:39 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 2.908 seconds (JVM running for 3.669)
@@ -77,3 +78,62 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: com.sound.door.C
 2020-03-06 16:05:42 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-P8JQQNA with PID 4488 (C:\Users\USER\git\w_sound\door\bin\main started by USER in C:\Users\USER\git\w_sound\door)
 2020-03-06 16:05:42 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
 2020-03-06 16:05:43 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 1.31 seconds (JVM running for 30664.971)
+=======
+2020-03-06 07:34:36 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-P8JQQNA with PID 4488 (C:\Users\USER\git\w_sound\door\bin\main started by USER in C:\Users\USER\git\w_sound\door)
+2020-03-06 07:34:36 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-06 07:34:39 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 2.908 seconds (JVM running for 3.669)
+2020-03-06 15:48:30 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-1V2UL8N with PID 5044 (C:\Users\USER\Desktop\gigigit\w_sound\door\bin\main started by USER in C:\Users\USER\Desktop\gigigit\w_sound\door)
+2020-03-06 15:48:30 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-06 15:48:35 [WARN ] [OptionalLiveReloadServer.java]startServer(61) : Unable to start LiveReload server
+2020-03-06 15:48:35 [ERROR] [LoggingFailureAnalysisReporter.java]report(40) : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9003 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9003 or configure this application to listen on another port.
+
+2020-03-06 15:48:56 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-1V2UL8N with PID 18140 (C:\Users\USER\Desktop\gigigit\w_sound\door\bin\main started by USER in C:\Users\USER\Desktop\gigigit\w_sound\door)
+2020-03-06 15:48:56 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-06 15:48:59 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 4.123 seconds (JVM running for 5.021)
+2020-03-06 15:49:21 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-1V2UL8N with PID 19444 (C:\Users\USER\Desktop\gigigit\w_sound\door\bin\main started by USER in C:\Users\USER\Desktop\gigigit\w_sound\door)
+2020-03-06 15:49:21 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-06 15:49:25 [WARN ] [OptionalLiveReloadServer.java]startServer(61) : Unable to start LiveReload server
+2020-03-06 15:49:25 [ERROR] [LoggingFailureAnalysisReporter.java]report(40) : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9003 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9003 or configure this application to listen on another port.
+
+2020-03-06 15:49:34 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-1V2UL8N with PID 19940 (C:\Users\USER\Desktop\gigigit\w_sound\door\bin\main started by USER in C:\Users\USER\Desktop\gigigit\w_sound\door)
+2020-03-06 15:49:34 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-06 15:49:38 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 4.564 seconds (JVM running for 5.722)
+2020-03-06 15:50:22 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-1V2UL8N with PID 19940 (C:\Users\USER\Desktop\gigigit\w_sound\door\bin\main started by USER in C:\Users\USER\Desktop\gigigit\w_sound\door)
+2020-03-06 15:50:22 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-06 15:50:23 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 1.584 seconds (JVM running for 50.604)
+2020-03-06 15:51:09 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-1V2UL8N with PID 19940 (C:\Users\USER\Desktop\gigigit\w_sound\door\bin\main started by USER in C:\Users\USER\Desktop\gigigit\w_sound\door)
+2020-03-06 15:51:09 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-06 15:51:11 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 1.748 seconds (JVM running for 98.516)
+2020-03-06 15:51:22 [WARN ] [HikariConfig.java]validateNumerics(1009) : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2020-03-06 15:51:22 [INFO ] [HikariDataSource.java]getConnection(110) : HikariPool-1 - Starting...
+2020-03-06 15:51:23 [INFO ] [HikariDataSource.java]getConnection(123) : HikariPool-1 - Start completed.
+2020-03-06 16:03:20 [INFO ] [HikariDataSource.java]close(350) : HikariPool-1 - Shutdown initiated...
+2020-03-06 16:03:20 [INFO ] [HikariDataSource.java]close(352) : HikariPool-1 - Shutdown completed.
+2020-03-06 16:03:21 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-1V2UL8N with PID 19940 (C:\Users\USER\Desktop\gigigit\w_sound\door\bin\main started by USER in C:\Users\USER\Desktop\gigigit\w_sound\door)
+2020-03-06 16:03:21 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-06 16:03:23 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 1.597 seconds (JVM running for 830.056)
+>>>>>>> branch 'master' of https://github.com/w8230/w_sound.git
