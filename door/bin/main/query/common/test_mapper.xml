@@ -2,5 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.sound.door.Mapper.TestMapper">
-   
+    <select id="sysDeptGet" resultType="com.sound.door.Common.SYSDept">
+        	SELECT * FROM SYS_DEPT_CD WHERE SITE_CODE='S0001' AND DEPT_CODE='D1000'
+    </select>
 </mapper>
