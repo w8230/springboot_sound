@@ -50,3 +50,8 @@ Identify and stop the process that's listening on port 9003 or configure this ap
 2020-03-06 15:51:22 [WARN ] [HikariConfig.java]validateNumerics(1009) : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
 2020-03-06 15:51:22 [INFO ] [HikariDataSource.java]getConnection(110) : HikariPool-1 - Starting...
 2020-03-06 15:51:23 [INFO ] [HikariDataSource.java]getConnection(123) : HikariPool-1 - Start completed.
+2020-03-06 16:03:20 [INFO ] [HikariDataSource.java]close(350) : HikariPool-1 - Shutdown initiated...
+2020-03-06 16:03:20 [INFO ] [HikariDataSource.java]close(352) : HikariPool-1 - Shutdown completed.
+2020-03-06 16:03:21 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-1V2UL8N with PID 19940 (C:\Users\USER\Desktop\gigigit\w_sound\door\bin\main started by USER in C:\Users\USER\Desktop\gigigit\w_sound\door)
+2020-03-06 16:03:21 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-06 16:03:23 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 1.597 seconds (JVM running for 830.056)
