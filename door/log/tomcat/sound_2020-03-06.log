@@ -1,0 +1,3 @@
+2020-03-06 07:34:36 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-P8JQQNA with PID 4488 (C:\Users\USER\git\w_sound\door\bin\main started by USER in C:\Users\USER\git\w_sound\door)
+2020-03-06 07:34:36 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-06 07:34:39 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 2.908 seconds (JVM running for 3.669)
