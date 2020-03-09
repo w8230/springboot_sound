@@ -1338,3 +1338,74 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 2020-03-09 10:47:47 [WARN ] [HikariConfig.java]validateNumerics(1009) : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
 2020-03-09 10:47:47 [INFO ] [HikariDataSource.java]getConnection(110) : HikariPool-1 - Starting...
 2020-03-09 10:47:48 [INFO ] [HikariDataSource.java]getConnection(123) : HikariPool-1 - Start completed.
+2020-03-09 10:52:09 [INFO ] [HikariDataSource.java]close(350) : HikariPool-1 - Shutdown initiated...
+2020-03-09 10:52:10 [INFO ] [HikariDataSource.java]close(352) : HikariPool-1 - Shutdown completed.
+2020-03-09 10:52:10 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-P8JQQNA with PID 14744 (C:\Users\USER\git\w_sound\door\bin\main started by USER in C:\Users\USER\git\w_sound\door)
+2020-03-09 10:52:10 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-09 10:52:10 [WARN ] [AbstractApplicationContext.java]refresh(558) : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sound.door.BootApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'homeRestController' for bean class [com.sound.door.Common.HomeRestController] conflicts with existing, non-compatible bean definition of same name and class [com.sound.door.Common.Home.HomeRestController]
+2020-03-09 10:52:10 [ERROR] [SpringApplication.java]reportFailure(826) : Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sound.door.BootApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'homeRestController' for bean class [com.sound.door.Common.HomeRestController] conflicts with existing, non-compatible bean definition of same name and class [com.sound.door.Common.Home.HomeRestController]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:319)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:236)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:706)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.sound.door.BootApplication.main(BootApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'homeRestController' for bean class [com.sound.door.Common.HomeRestController] conflicts with existing, non-compatible bean definition of same name and class [com.sound.door.Common.Home.HomeRestController]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:295)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174)
+	... 18 common frames omitted
+2020-03-09 10:53:14 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-P8JQQNA with PID 14744 (C:\Users\USER\git\w_sound\door\bin\main started by USER in C:\Users\USER\git\w_sound\door)
+2020-03-09 10:53:14 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-09 10:53:14 [WARN ] [AbstractApplicationContext.java]refresh(558) : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sound.door.BootApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'homeRestController' for bean class [com.sound.door.Common.HomeRestController] conflicts with existing, non-compatible bean definition of same name and class [com.sound.door.Common.Home.HomeRestController]
+2020-03-09 10:53:14 [ERROR] [SpringApplication.java]reportFailure(826) : Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.sound.door.BootApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'homeRestController' for bean class [com.sound.door.Common.HomeRestController] conflicts with existing, non-compatible bean definition of same name and class [com.sound.door.Common.Home.HomeRestController]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:319)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:236)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:706)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.sound.door.BootApplication.main(BootApplication.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'homeRestController' for bean class [com.sound.door.Common.HomeRestController] conflicts with existing, non-compatible bean definition of same name and class [com.sound.door.Common.Home.HomeRestController]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:295)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:206)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:174)
+	... 18 common frames omitted
+2020-03-09 10:53:26 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-P8JQQNA with PID 14744 (C:\Users\USER\git\w_sound\door\bin\main started by USER in C:\Users\USER\git\w_sound\door)
+2020-03-09 10:53:26 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-09 10:53:27 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 1.334 seconds (JVM running for 354.911)
