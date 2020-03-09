@@ -4029,3 +4029,16 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [conte
 2020-03-09 11:47:42 [WARN ] [HikariConfig.java]validateNumerics(1009) : HikariPool-6 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
 2020-03-09 11:47:42 [INFO ] [HikariDataSource.java]getConnection(110) : HikariPool-6 - Starting...
 2020-03-09 11:47:42 [INFO ] [HikariDataSource.java]getConnection(123) : HikariPool-6 - Start completed.
+2020-03-09 12:00:43 [INFO ] [HikariDataSource.java]close(350) : HikariPool-6 - Shutdown initiated...
+2020-03-09 12:00:43 [INFO ] [HikariDataSource.java]close(352) : HikariPool-6 - Shutdown completed.
+2020-03-09 12:00:44 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-P8JQQNA with PID 14744 (C:\Users\USER\git\w_sound\door\bin\main started by USER in C:\Users\USER\git\w_sound\door)
+2020-03-09 12:00:44 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-09 12:00:45 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 1.252 seconds (JVM running for 4393.108)
+2020-03-09 14:05:57 [WARN ] [HikariConfig.java]validateNumerics(1009) : HikariPool-7 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2020-03-09 14:05:58 [INFO ] [HikariDataSource.java]getConnection(110) : HikariPool-7 - Starting...
+2020-03-09 14:05:58 [INFO ] [HikariDataSource.java]getConnection(123) : HikariPool-7 - Start completed.
+2020-03-09 14:59:42 [INFO ] [HikariDataSource.java]close(350) : HikariPool-7 - Shutdown initiated...
+2020-03-09 14:59:42 [INFO ] [HikariDataSource.java]close(352) : HikariPool-7 - Shutdown completed.
+2020-03-09 14:59:42 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-P8JQQNA with PID 14744 (C:\Users\USER\git\w_sound\door\bin\main started by USER in C:\Users\USER\git\w_sound\door)
+2020-03-09 14:59:42 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-09 14:59:43 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 1.354 seconds (JVM running for 15131.326)
