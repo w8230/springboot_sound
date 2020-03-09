@@ -7,4 +7,5 @@ import com.sound.door.Common.Interceptor.UserData;
 @Repository
 public interface mesManaerMapper {
 	int validUser(UserData userData);
+	UserData getUserData(UserData userData);
 }

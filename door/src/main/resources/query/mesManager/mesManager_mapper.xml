@@ -5,4 +5,7 @@
     <select id="validUser" resultType="int">
         	SELECT COUNT(*) FROM SYS_USER_CD WHERE USER_CODE = #{user_code} AND USER_PWD = #{user_pwd}
     </select>
+    <select id="getUserData" resultType="com.sound.door.Common.Interceptor.UserData">
+        	SELECT * FROM SYS_USER_CD WHERE USER_CODE = #{user_code} AND USER_PWD = #{user_pwd}
+    </select>
 </mapper>

@@ -2,6 +2,7 @@ package com.sound.door.Common.Interceptor;
 
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter; 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,12 +19,14 @@ import java.io.PrintWriter;
  * @since 2019-11-14
  **/
 @Component
+@SessionAttributes("userData")
 public class Handler extends HandlerInterceptorAdapter{
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
         HttpSession session = request.getSession();
 
         UserData sessionData = (UserData) session.getAttribute("userData");
+        request.getSession().setAttribute("userData", sessionData);
         response.setHeader("pragma", "No-cache");
         response.setHeader("Cache-Control", "no-cache");
         response.addHeader("Cache-Control", "No-store");
