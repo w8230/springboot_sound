@@ -1,14 +1,11 @@
 <div class="page-container-h horizontal-menu ">
 <header class="navbar navbar-fixed-top hidden-xs">
-	
 	<div class="navbar-inner">
-		<!-- logo -->
 		<div class="navbar-brand"> 
 			<a href="/"> 
 			<img src="assets/images/logo@2x.png" width="120" alt="">
 			</a> 
 		</div>
-		<!-- main menu -->
 		<ul class="navbar-nav">
 			<li class="opened active has-sub root-level"> 
 				<a href="https://demo.neontheme.com/layouts/layout-api/">
@@ -47,3 +44,11 @@
 	</div>
 </header>
 </div>
+<script>
+	function logout(){
+		var result = confirm("로그아웃 하시겠습니까?");
+		if(result){
+			location.href="logout"
+		}
+	}
+</script>
