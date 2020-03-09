@@ -4042,3 +4042,25 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [conte
 2020-03-09 14:59:42 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-P8JQQNA with PID 14744 (C:\Users\USER\git\w_sound\door\bin\main started by USER in C:\Users\USER\git\w_sound\door)
 2020-03-09 14:59:42 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
 2020-03-09 14:59:43 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 1.354 seconds (JVM running for 15131.326)
+2020-03-09 15:00:11 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-P8JQQNA with PID 14744 (C:\Users\USER\git\w_sound\door\bin\main started by USER in C:\Users\USER\git\w_sound\door)
+2020-03-09 15:00:11 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-09 15:00:12 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 1.476 seconds (JVM running for 15160.099)
+2020-03-09 15:17:00 [WARN ] [HikariConfig.java]validateNumerics(1009) : HikariPool-8 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2020-03-09 15:17:00 [INFO ] [HikariDataSource.java]getConnection(110) : HikariPool-8 - Starting...
+2020-03-09 15:17:00 [INFO ] [HikariDataSource.java]getConnection(123) : HikariPool-8 - Start completed.
+2020-03-09 15:21:24 [INFO ] [HikariDataSource.java]close(350) : HikariPool-8 - Shutdown initiated...
+2020-03-09 15:21:24 [INFO ] [HikariDataSource.java]close(352) : HikariPool-8 - Shutdown completed.
+2020-03-09 15:21:27 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-P8JQQNA with PID 17416 (C:\Users\USER\git\w_sound\door\bin\main started by USER in C:\Users\USER\git\w_sound\door)
+2020-03-09 15:21:27 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-09 15:21:30 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 3.036 seconds (JVM running for 3.734)
+2020-03-09 15:21:40 [WARN ] [HikariConfig.java]validateNumerics(1009) : HikariPool-1 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2020-03-09 15:21:40 [INFO ] [HikariDataSource.java]getConnection(110) : HikariPool-1 - Starting...
+2020-03-09 15:21:40 [INFO ] [HikariDataSource.java]getConnection(123) : HikariPool-1 - Start completed.
+2020-03-09 15:23:52 [INFO ] [HikariDataSource.java]close(350) : HikariPool-1 - Shutdown initiated...
+2020-03-09 15:23:52 [INFO ] [HikariDataSource.java]close(352) : HikariPool-1 - Shutdown completed.
+2020-03-09 15:23:53 [INFO ] [StartupInfoLogger.java]logStarting(55) : Starting BootApplication on DESKTOP-P8JQQNA with PID 17416 (C:\Users\USER\git\w_sound\door\bin\main started by USER in C:\Users\USER\git\w_sound\door)
+2020-03-09 15:23:53 [INFO ] [SpringApplication.java]logStartupProfileInfo(651) : No active profile set, falling back to default profiles: default
+2020-03-09 15:23:54 [INFO ] [StartupInfoLogger.java]logStarted(61) : Started BootApplication in 1.365 seconds (JVM running for 148.084)
+2020-03-09 15:24:00 [WARN ] [HikariConfig.java]validateNumerics(1009) : HikariPool-2 - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2020-03-09 15:24:00 [INFO ] [HikariDataSource.java]getConnection(110) : HikariPool-2 - Starting...
+2020-03-09 15:24:01 [INFO ] [HikariDataSource.java]getConnection(123) : HikariPool-2 - Start completed.
