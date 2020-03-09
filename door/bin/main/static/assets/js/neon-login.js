@@ -13,16 +13,13 @@ var neonLogin = neonLogin || {};
 	$(document).ready(function()
 	{
 		neonLogin.$container = $("#form_login");
-		
-		
-		// Login Form & Validation
 		neonLogin.$container.validate({
 			rules: {
-				username: {
+				user_code: {
 					required: true	
 				},
 				
-				password: {
+				user_pwd: {
 					required: true
 				},
 				
@@ -40,70 +37,42 @@ var neonLogin = neonLogin || {};
 			
 			submitHandler: function(ev)
 			{
-				/* 
-					Updated on v1.1.4
-					Login form now processes the login data, here is the file: data/sample-login-form.php
-				*/
-				
-				$(".login-page").addClass('logging-in'); // This will hide the login form and init the progress bar
-					
-					
-				// Hide Errors
-				$(".form-login-error").slideUp('fast');
-
-				// We will wait till the transition ends				
+				$(".login-page").addClass('logging-in');
+				$(".form-login-error").slideUp('fast');		
 				setTimeout(function()
 				{
 					var random_pct = 25 + Math.round(Math.random() * 30);
-					
-					// The form data are subbmitted, we can forward the progress to 70%
 					neonLogin.setPercentage(40 + random_pct);
-											
-					// Send data to the server
 					$.ajax({
-						url: baseurl + 'data/sample-login-form.php',
-						method: 'POST',
+						url: '/validUser',
 						dataType: 'json',
 						data: {
-							username: $("input#username").val(),
-							password: $("input#password").val(),
+							user_code: $("#user_code").val(),
+							user_pwd: $("#user_pwd").val(),
 						},
 						error: function()
 						{
-							alert("An error occoured!");
+							alert("데이터 요청에 실패하였습니다.");
+							location.href="/login"
 						},
 						success: function(response)
 						{
-							// Login status [success|invalid]
-							var login_status = response.login_status;
-															
-							// Form is fully completed, we update the percentage
-							neonLogin.setPercentage(100);
-							
-							
-							// We will give some time for the animation to finish, then execute the following procedures	
+							neonLogin.setPercentage(100);	
 							setTimeout(function()
 							{
-								// If login is invalid, we store the 
-								if(login_status == 'invalid')
+								if(response == 0)
 								{
 									$(".login-page").removeClass('logging-in');
 									neonLogin.resetProgressBar(true);
+									alert("아이디나 비밀번호를 확인해주세요.");
+									location.href="/login";
 								}
 								else
-								if(login_status == 'success')
+								if(response > 0)
 								{
-									// Redirect to login page
 									setTimeout(function()
 									{
-										var redirect_url = baseurl;
-										
-										if(response.redirect_url && response.redirect_url.length)
-										{
-											redirect_url = response.redirect_url;
-										}
-										
-										window.location.href = redirect_url;
+										location.href="/";
 									}, 400);
 								}
 								
@@ -116,10 +85,6 @@ var neonLogin = neonLogin || {};
 			}
 		});
 		
-		
-		
-		
-		// Lockscreen & Validation
 		var is_lockscreen = $(".login-page").hasClass('is-lockscreen');
 		
 		if(is_lockscreen)
@@ -130,7 +95,7 @@ var neonLogin = neonLogin || {};
 			neonLogin.$container.validate({
 				rules: {
 				
-					password: {
+					user_pwd: {
 						required: true
 					},
 					
@@ -148,33 +113,17 @@ var neonLogin = neonLogin || {};
 				
 				submitHandler: function(ev)
 				{	
-					/* 
-						Demo Purpose Only 
-						
-						Here you can handle the page login, currently it does not process anything, just fills the loader.
-					*/
-					
-					$(".login-page").addClass('logging-in-lockscreen'); // This will hide the login form and init the progress bar
-	
-					// We will wait till the transition ends				
+					$(".login-page").addClass('logging-in-lockscreen');
 					setTimeout(function()
 					{
 						var random_pct = 25 + Math.round(Math.random() * 30);
 						
 						neonLogin.setPercentage(random_pct, function()
 						{
-							// Just an example, this is phase 1
-							// Do some stuff...
-							
-							// After 0.77s second we will execute the next phase
 							setTimeout(function()
 							{
 								neonLogin.setPercentage(100, function()
 								{
-									// Just an example, this is phase 2
-									// Do some other stuff...
-									
-									// Redirect to the page
 									setTimeout("window.location.href = '../../'", 600);
 								}, 2);
 								
@@ -185,13 +134,6 @@ var neonLogin = neonLogin || {};
 				}
 			});
 		}
-		
-		
-		
-		
-		
-		
-		// Login Form Setup
 		neonLogin.$body = $(".login-page");
 		neonLogin.$login_progressbar_indicator = $(".login-progressbar-indicator h3");
 		neonLogin.$login_progressbar = neonLogin.$body.find(".login-progressbar div");
@@ -221,8 +163,6 @@ var neonLogin = neonLogin || {};
 		{
 			neonLogin.$container.find('input:first').focus();
 		}
-		
-		// Focus Class
 		neonLogin.$container.find('.form-control').each(function(i, el)
 		{
 			var $this = $(el),
@@ -246,13 +186,10 @@ var neonLogin = neonLogin || {};
 			});
 		});
 		
-		// Functions
 		$.extend(neonLogin, {
 			setPercentage: function(pct, callback)
 			{
 				pct = parseInt(pct / 100 * 100, 10) + '%';
-				
-				// Lockscreen
 				if(is_lockscreen)
 				{
 					neonLogin.$lockscreen_progress_indicator.html(pct);
@@ -275,7 +212,6 @@ var neonLogin = neonLogin || {};
 					return;
 				}
 				
-				// Normal Login
 				neonLogin.$login_progressbar_indicator.html(pct);
 				neonLogin.$login_progressbar.width(pct);
 				
@@ -324,17 +260,12 @@ var neonLogin = neonLogin || {};
 						{
 							$errors_container.css({height: 'auto'});
 						}});
-						
-						// Reset password fields
-						neonLogin.$container.find('input[type="password"]').val('');
+						neonLogin.$container.find('input[type="user_pwd"]').val('');
 					}
 					
 				}, 800);
 			}
 		});
-		
-		
-		// Lockscreen Create Canvas
 		if(is_lockscreen)
 		{
 			neonLogin.$lockscreen_progress_canvas = $('<canvas></canvas>');
@@ -355,8 +286,6 @@ var neonLogin = neonLogin || {};
 			
 			
 			neonLogin.lockscreen_progress_canvas = neonLogin.$lockscreen_progress_canvas.get(0);
-			
-			// Create Progress Circle
 			var bg = neonLogin.lockscreen_progress_canvas,
 				ctx = ctx = bg.getContext('2d'),
 				imd = null,

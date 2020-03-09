@@ -4108,6 +4108,8 @@ hr + .mail-env {
   font-size: 13px;
   margin-top: 20px;
   margin-bottom: 0;
+  font-weight: 700;
+  color: #ffffff;
   -moz-transition: all 550ms ease-in-out;
   -webkit-transition: all 550ms ease-in-out;
   -o-transition: all 550ms ease-in-out;

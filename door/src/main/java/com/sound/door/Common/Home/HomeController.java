@@ -1,4 +1,4 @@
-package com.sound.door.Common;
+package com.sound.door.Common.Home;
 
 
 import org.springframework.stereotype.Controller;
