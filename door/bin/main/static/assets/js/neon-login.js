@@ -57,6 +57,7 @@ var neonLogin = neonLogin || {};
 						},
 						success: function(response)
 						{
+							alert(response)
 							neonLogin.setPercentage(100);	
 							setTimeout(function()
 							{
