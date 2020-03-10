@@ -73,6 +73,8 @@ public class Handler extends HandlerInterceptorAdapter{
                     out.close();
                     return false;
                 }
+            } else if ("XMLHttpRequest".equals(request.getHeader("X-Requested-With"))) {
+
             } else{
             	 if (request.getServletPath().equals("/") || request.getServletPath().equals("/loginAction")) { // left 메뉴가 없을시
                      authService.model_menu_setting(request);

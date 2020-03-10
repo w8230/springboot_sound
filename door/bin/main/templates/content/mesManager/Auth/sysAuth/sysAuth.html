@@ -1,40 +1,5 @@
-<script>
-	$(window).on('resize.jqGrid', function () {
-		$("#jqGrid").jqGrid('setGridWidth', $("#content").width());
-	});
-	function get_btn(page) {
-	    $("#jqGrid").setGridParam({ // 그리드 조회
-	        url: '/sysDeptGet',
-	        datatype: "json",
-	        page: page
-	    }).trigger("reloadGrid");
-	}
-	$(document).ready(function () {
-		$("#jqGrid").jqGrid({
-			 	datatype: "local",
-		        mtype: 'POST',
-		        colNames : ['부서코드','부서명','사용유무','등록자','등록일'],
-		        colModel : [
-		            {name:'dept_code',index:'dept_code',key: true ,sortable: false,width:100},
-		            {name:'dept_name',index:'dept_name',sortable: false,width:200},
-		            {name:'use_yn',index:'use_yn',sortable: false,width:100},
-		            {name:'user_name',index:'user_name',sortable: false,width:150},
-		            {name:'update_date',index:'update_date',sortable: false,width:180}
-		        ],
-		        caption: "권한그룹관리 | MES",
-		        height: 600,
-		        pager: '#jqGridPager',
-		        jsonReader: {cell: ""},
-		        rowNum: 100,
-		        rowList: [100, 200, 300, 400],
-		        viewrecords: true,
-		        multiselect: true
-		});
-		
-		
-	});
-</script>
 
+<script src="data-component/mesManager/auth/sysAuth/sysAuth.js"></script>
 <div class="col-md-12 col-xs-12 breadcrumb1">
 	<div class="col-md-6 col-xs-6 hidden-xs">
 		<div>
@@ -54,107 +19,29 @@
 				<a href="#">관리자</a>
 			</li>
 			<li class="active">
-				공통코드관리리
+				권한그룹관리
 			</li>
 		</ol>
 	</div>
 </div>
 
-<div class="row">
-	<div class="col-md-12">
-		<table class="table table-condensed table-bordered table-striped">
-			<tr>
-				<th style="width:10%;">CODE1</th>
-				<td style="width:20%;"><input type="text" class="form-control input-sm" id="field-1"
-						placeholder="코드를 입력하세요."></td>
-				<th style="width:10%;">CODE2</th>
-				<td style="width:20%;"><input type="text" class="form-control input-sm" id="field-2"
-						placeholder="코드를 입력하세요."></td>
-				<td class="hidden-xs hide-td" style="width:40%;"></td>
-			</tr>
-		</table>
-	</div>
-</div>
+
 <div class="btngrp">
-	<a href="#" class="btn btn-primary btn-xs" onclick="get_btn(1);">
+	<a href="javascript:;" class="btn btn-primary btn-xs" onclick="get_btn(1);">
 		<i class="entypo-search"></i>
 		조회
 	</a>
-	<a href="javascript:;" onclick="jQuery('#modal-6').modal('show', {backdrop: 'static', draggable: 'true'});" class="btn btn-primary btn-xs">
+	<a href="javascript:;" onclick="add_btn();" class="btn btn-primary btn-xs">
 		<i class="entypo-plus"></i>
 		추가
 	</a>
-	<a class="btn btn-primary btn-xs">
+	<a href="javascript:;" class="btn btn-primary btn-xs" onclick="delete_btn();">
 		<i class="entypo-trash"></i>
 		삭제
 	</a>
 </div>
 
-<table id="jqGrid"></table>
-<div id="jqGridPager"></div>
+<table id="mes_grid"></table>
+<div id="mes_grid_pager"></div>
 
-
-<div class="modal fade in" id="modal-6">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
-					aria-hidden="true">×</button>
-				<h4 class="modal-title">기초정보 등록</h4>
-			</div>
-			<div class="modal-body">
-				<div class="row">
-					<div class="col-md-6 col-xs-6">
-						<table class="table table-condensed table-bordered table-striped">
-							<tr>
-								<th>CODE1</th>
-								<td><input type="text" class="form-control input-sm" placeholder="코드를 입력하세요."></td>
-							</tr>
-							<tr>
-								<th>CODE1</th>
-								<td><input type="text" class="form-control input-sm" placeholder="코드를 입력하세요."></td>
-							</tr>
-							<tr>
-								<th>CODE1</th>
-								<td><input type="text" class="form-control input-sm" placeholder="코드를 입력하세요."></td>
-							</tr>
-							<tr>
-								<th>CODE1</th>
-								<td><input type="text" class="form-control input-sm" placeholder="코드를 입력하세요."></td>
-							</tr>
-							<tr>
-								<th>CODE1</th>
-								<td><input type="text" class="form-control input-sm" placeholder="코드를 입력하세요."></td>
-							</tr>
-						</table>
-					</div>
-					<div class="col-md-6 col-xs-6">
-						<table class="table table-condensed table-bordered table-striped">
-							<tr>
-								<th>CODE1</th>
-								<td><input type="text" class="form-control input-sm" placeholder="코드를 입력하세요."></td>
-							</tr>
-							<tr>
-								<th>CODE1</th>
-								<td><input type="text" class="form-control input-sm" placeholder="코드를 입력하세요."></td>
-							</tr>
-							<tr>
-								<th>CODE1</th>
-								<td><input type="text" class="form-control input-sm" placeholder="코드를 입력하세요."></td>
-							</tr>
-							<tr>
-								<th>CODE1</th>
-								<td><input type="text" class="form-control input-sm" placeholder="코드를 입력하세요."></td>
-							</tr>
-							<tr>
-								<th>CODE1</th>
-								<td><input type="text" class="form-control input-sm" placeholder="코드를 입력하세요."></td>
-							</tr>
-						</table>
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer"> <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">닫기</button>
-				<button type="button" class="btn btn-info btn-xs">저장</button> </div>
-		</div>
-	</div>
-</div>
+<th:block th:include="content/mesManager/Auth/sysAuth/sysAuth_modal1"></th:block>

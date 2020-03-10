@@ -3,7 +3,7 @@ package com.sound.door.Common.Auth;
 import com.sound.door.Common.DataTransferObject.Page;
 import com.sound.door.Common.Function.AuthFunction;
 import com.sound.door.Common.Interceptor.Session;
-import com.sound.door.Mapper.Auth.AuthMapper;
+import com.sound.door.Mapper.Common.Auth.AuthMapper;
 import com.sound.door.mesManager.Auth.DTO.SYSAuthProgram;
 
 //import com.sound.door.mesManager.Authority.DTO.SYSAuthProgram;
@@ -75,6 +75,7 @@ public class AuthService extends AuthFunction{
     public void model_menu_setting(HttpServletRequest req, String page_name, String top_menu_name, String under_name) {
         req.setAttribute("page_name",page_name);
         req.setAttribute("top_active",under_name);
+        req.setAttribute("top_code",top_menu_name);
         req.setAttribute("under_active",page_name);
         req.setAttribute("main_list",authMainSelect2(req));
         req.setAttribute("left_list",authSubSelect(req, top_menu_name));

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sound.door.Mapper.Common.Various.VariousMapper">
+     <select id="menuAuthGet" resultType="com.sound.door.mesManager.Auth.DTO.SYSAuthProgram">
+   		EXEC SP_SYS_AUTH_MENU_GET  #{keyword} ,#{user_code}
+   </select>
+</mapper>

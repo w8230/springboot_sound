@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sound.door.Mapper.mesManager.Auth.MesAuthMapper">
+       <select id="sysAuthGet" resultType="com.sound.door.mesManager.Auth.DTO.SYSAuth">
+        	EXEC SP_SYS_AUTH_GROUP_GET  #{page},#{rows},''
+    </select>
+
+    <select id="sysAuthAU" resultType="com.sound.door.Common.DataTransferObject.Message">
+        	EXEC SP_SYS_AUTH_GROUP_ADD  #{auth_code},#{auth_name},#{user_code},#{keyword}
+    </select>
+
+
+    <select id="sysAuthDelete" resultType="com.sound.door.Common.DataTransferObject.Message">
+        	EXEC SP_SYS_AUTH_GROUP_DEL  #{keyword}
+    </select>
+
+    <select id="sysAuthAllGet" resultType="com.sound.door.mesManager.Auth.DTO.SYSAuth">
+        	EXEC SP_SYS_AUTH_GROUP_GET  0,0,''
+    </select>
+
+    <select id="menuAllGet" resultType="com.sound.door.Common.Auth.Auth">
+        	EXEC SP_SYS_MENU_TREE_GET ''
+    </select>
+
+    <select id="sysAuthProgramGet" resultType="com.sound.door.mesManager.Auth.DTO.SYSAuthProgram">
+        	EXEC SP_SYS_AUTH_PROGRAM_GET #{keyword},#{keyword2}
+    </select>
+
+    <select id="sysAuthProgramAdd" resultType="com.sound.door.Common.DataTransferObject.Message">
+        	EXEC SP_SYS_AUTH_PROGRAM_ADD #{keyword},#{keyword2}
+    </select>
+    <select id="sysAuthOneGet" resultType="com.sound.door.mesManager.Auth.DTO.SYSAuth">
+        	EXEC SP_SYS_AUTH_GROUP_GET  1,1,#{keyword}
+    </select>
+</mapper>

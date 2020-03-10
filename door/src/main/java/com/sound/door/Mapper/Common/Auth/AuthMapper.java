@@ -1,4 +1,4 @@
-package com.sound.door.Mapper.Auth;
+package com.sound.door.Mapper.Common.Auth;
 
 import java.util.List;
 

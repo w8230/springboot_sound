@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.sound.door.Mapper.TestMapper">
+<mapper namespace="com.sound.door.Mapper.mesManager.Auth.MesAuthMapper">
     <select id="sysDeptGet" resultType="com.sound.door.mesManager.DTO.SYSDept">
         	SELECT * FROM SYS_DEPT_CD WHERE SITE_CODE='S0001'
     </select>
