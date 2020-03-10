@@ -7,6 +7,125 @@
 			</a> 
 		</div>
 		<ul class="navbar-nav">
+	<!--  
+		<c:set var="doneLoop" value="false"/>
+        <c:set var="doneLoop2" value="false"/>
+        <c:forEach var="main_list" items="${main_list}" varStatus="starus">
+            <c:set var="doneLoop" value="false"/>
+            <c:set var="doneLoop3" value="true"/>
+            <li id="mid-nav" class="hover <c:out value="${main_list.menu_name}"/>">
+                <c:forEach var="under_list2" items="${allSub_list[starus.index]}">
+                    <c:if test="${doneLoop != true}">
+                        <c:if test="${under_list2.level == 2 }">
+                            <c:set var="doneLoop3" value="false"/>
+                        </c:if>
+                        <c:if test="${doneLoop3 != true}">
+                            <c:if test="${under_list2.level == 3 }">
+
+                                <c:if test="${main_list.menu_name != '게시판'}">
+                                    <a href='<c:out value="${under_list2.menu_code}"/>'>
+
+                                </c:if>
+
+                                    <c:if test="${main_list.menu_name eq '관리자'}">
+                                        <i class="menu-icon fa fa-asterisk"></i>
+                                    </c:if>
+                                    <c:if test="${main_list.menu_name eq '자재관리'}">
+                                        <i class="menu-icon fa fa-cogs"></i>
+                                    </c:if>
+                                    <c:if test="${main_list.menu_name eq '출하관리'}">
+                                        <i class="menu-icon fa fa-cogs"></i>
+                                    </c:if>
+                                    <c:if test="${main_list.menu_name eq '영업관리'}">
+                                        <i class="menu-icon fa fa-cogs"></i>
+                                    </c:if>
+                                    <c:if test="${main_list.menu_name eq '품질관리'}">
+                                        <i class="menu-icon fa fa-cogs"></i>
+                                    </c:if>
+                                    <c:if test="${main_list.menu_name eq '생산관리'}">
+                                        <i class="menu-icon fa fa-cogs"></i>
+                                    </c:if>
+                                    <c:if test="${main_list.menu_name eq '외주관리'}">
+                                        <i class="menu-icon fa fa-cogs"></i>
+                                    </c:if>
+                                    <c:if test="${main_list.menu_name eq '설비관리'}">
+                                        <i class="menu-icon fa fa-cogs"></i>
+                                    </c:if>
+                                    <c:if test="${main_list.menu_name eq '게시판'}">
+                                    <a onclick="viewBoard('<c:out value="${under_list2.menu_code}"/>');" style="cursor:pointer;">
+                                        <i class="menu-icon fa fa-cogs"></i>
+                                    </c:if>
+                                    <span class="menu-text2"><c:out value="${main_list.menu_name}"/></span>
+                                </a>
+                                <b class="arrow"></b>
+                                <c:set var="doneLoop" value="true"/>
+                            </c:if>
+                        </c:if>
+                    </c:if>
+                </c:forEach>
+            </li>
+        </c:forEach>
+		
+	-->		
+		
+		
+		
+		
+		
+
+
+
+
+
+	
+		<th:block th:each="main_list : ${main_list}" th:with="doneLoop=false">
+			
+			<li class="opened active has-sub root-level" th:with="doneLoop=false,doneLoop3=true">
+			
+							<a th:href="${main_list.quick_menu_code}">
+								<i class="entypo-layout"></i><span class="title" th:text="|${main_list.menu_name}|"></span>
+							</a>
+			
+			
+			
+			<!--  
+			
+				<th:block th:each="under_list2 : ${allSub_list[main_listStat.index]}">
+			<th:block th:text="${under_list2}"/>
+
+					<th:block th:if="${doneLoop != true}">
+					
+				 		<th:block th:if="${under_list2.level == 2 }">
+				 		
+				 			<th:block th:with="doneLoop3=false">
+				 				
+				 			</th:block>
+				 			
+				 			
+				 		</th:block>
+					<th:block th:if="${doneLoop3 != true}">
+					
+						<th:block th:if="${under_list2.level == 3 }">
+							
+	
+ 
+							<a th:href="${under_list2.menu_code}">
+								<i class="entypo-layout"></i><span class="title" th:text="|${main_list.menu_name}|"></span>
+							</a>
+				
+							<th:block th:with="doneLoop=true"/>
+						</th:block>
+					</th:block>
+					</th:block>	
+				</th:block>
+				-->
+			</li>
+		</th:block>
+		
+		
+		
+		<!--  
+		
 			<li class="opened active has-sub root-level"> 
 				<a href="https://demo.neontheme.com/layouts/layout-api/">
 					<i class="entypo-layout"></i><span class="title">상단메뉴</span>
@@ -27,6 +146,11 @@
 					<i class="entypo-layout"></i><span class="title">상단메뉴</span>
 				</a>
 			</li>
+			
+			-->	
+			
+			
+			
 		</ul>
 			
 		<div class="nav_user">

@@ -10,4 +10,5 @@ public class UserData {
 	private String user_pwd;
 	private String dept_code;
 	private String logging_date;
+	private String keyword;
 }
