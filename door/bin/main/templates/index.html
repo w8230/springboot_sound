@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="context-path" th:content="@{/}"/>
+    <title>사운드 방음문 | MES</title>
     <th:block th:include="common/include-css"></th:block>
-    <th:block th:include="common/include-js">
-        <script src="js/ui.js"></script>
-    </th:block>
 </head>
 <body class="page-body">
     <div th:replace="common/common-header"></div>
@@ -17,3 +18,6 @@
     </div>
 </body>
 </html>
+<th:block th:include="common/include-js">
+        <script src="js/ui.js"></script>
+</th:block>

@@ -9911,7 +9911,6 @@ body {
   -moz-perspective: none;
   perspective: none;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 .modal .modal-header .close {
