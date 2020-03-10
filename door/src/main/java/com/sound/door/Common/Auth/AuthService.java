@@ -80,10 +80,12 @@ public class AuthService extends AuthFunction{
         req.setAttribute("main_list",authMainSelect2(req));
         req.setAttribute("left_list",authSubSelect(req, top_menu_name));
         req.setAttribute("bestTop_name",top_menu_name);
+        req.setAttribute("menu_check","0");
     }
 
     public void model_menu_setting(HttpServletRequest req){
         req.setAttribute("main_list",authMainSelect2(req));
+        req.setAttribute("menu_check","1");
         //req.setAttribute("allSub_list",authAllSubSelect(req));
     }
 

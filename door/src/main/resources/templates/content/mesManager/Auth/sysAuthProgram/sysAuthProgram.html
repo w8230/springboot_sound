@@ -1,0 +1,84 @@
+
+<script src="data-component/mesManager/auth/sysAuthProgram/sysAuthProgram.js"></script>
+<div class="col-md-12 col-xs-12 breadcrumb1">
+	<div class="col-md-6 col-xs-6 hidden-xs">
+		<div>
+			<img src="assets/images/72x72.png" class="iconimg">
+			<h2 class="pull-left">SOUND VISION | MES</h2>
+		</div>
+	</div>
+	<div class="col-md-6 col-xs-12">
+		<ol class="breadcrumb pull-right">
+			<li>
+				<a href="#">
+					<i class="entypo-home"></i>
+					홈
+				</a>
+			</li>
+			<li>
+				<a href="#">관리자</a>
+			</li>
+			<li class="active">
+				권한그룹별 프로그램관리
+			</li>
+		</ol>
+	</div>
+</div>
+
+
+<div class="row">
+        <div class="col-md-4">
+       </div>
+       <div class="col-md-8">
+        <table class="table table-condensed table-bordered table-striped">
+			<tr>
+				<th style="width:10%;">업무분류</th>
+				<td style="width:20%; text-align:left;" >
+				 	<select name="keyword2" class="form-control keyword condition_main" id="code_group" onchange="main_select_change(this);" >
+	                            </select>
+				</td>
+				
+				<td style="width:20%; text-align:left; border: none;">
+					<a id="add_btn"
+	                               class="dt-button buttons-csv buttons-html5 btn btn-white btn-primary btn-mini btn-bold"
+	                               tabindex="0" aria-controls="dynamic-table" data-original-title="" title=""
+	                                onclick="check_add_btn();">
+	                            <span><i class="fa fa-plus bigger-110 blue"></i>
+	                                <span>저장</span>
+	                            </span>
+	                            </a>
+						
+				</td>
+				<td class="hidden-xs hide-td" style="width:40%;">
+					
+				</td>
+			</tr>
+		</table>           
+     </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12 table-responsive">
+        <div class="row">
+            <div class="col-md-4">
+                <table id="mes_grid"></table>
+
+            </div>
+            <div class="col-md-8">
+
+                <div class="test12">
+                    <table id="mes_grid2"></table>
+
+                    <span class="oi oi-person"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

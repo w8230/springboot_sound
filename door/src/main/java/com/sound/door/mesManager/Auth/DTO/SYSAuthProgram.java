@@ -11,6 +11,7 @@ public class SYSAuthProgram {
     private String check_add;
     private String check_edit;
     private String check_del;
+    private String auth_code;
     private String parent_menu_code;
     private boolean leaf;
     private boolean expanded;

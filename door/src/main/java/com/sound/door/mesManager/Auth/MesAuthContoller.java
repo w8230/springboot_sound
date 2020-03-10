@@ -14,8 +14,9 @@ public class MesAuthContoller {
     }
 
     @RequestMapping(value = "/sysAuthProgram")
-    public String sysAuthProgram() {
-        return "mesManager/AuthorityManagement/sysAuthProgram/sysAuthProgram";
+    public String sysAuthProgram(Model model) {
+    	model.addAttribute("template", "content/mesManager/Auth/sysAuthProgram/sysAuthProgram");
+        return "index";
     }
 
 }

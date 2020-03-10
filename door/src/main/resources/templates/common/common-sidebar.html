@@ -25,6 +25,8 @@
 	
 	 
 	 	<ul id="main-menu" class="main-menu">	
+	 	
+	 	<th:block th:if="${menu_check == '0'}">
 			<th:block th:each="mainLeft_list : ${left_list[0]}">
 				<th:block th:if="${mainLeft_listStat.index != 0}">
 			
@@ -51,7 +53,7 @@
 					</li>
 				</th:block>
 			</th:block>
-			
+		</th:block>
 		<!--  
 						
 			

@@ -82,13 +82,13 @@ public class Handler extends HandlerInterceptorAdapter{
 	            	Page p = new Page();
 	                p.setKeyword(request.getServletPath().substring(1));
 	                SYSAuthProgram sap = authService.menuAuth(request, p);
-	//                if (sap.getCheck_get().equals("N")) {
-	//                    response.setContentType("text/html; charset=UTF-8");
-	//                    PrintWriter out = response.getWriter();
-	//                    out.println("<script>alert(' 권한이 존재하지않습니다.\\n 메인페이지로 이동합니다.'); location.href='/';</script>");
-	//                    out.flush();
-	//                    return false;
-	//                }
+	                if (sap.getCheck_get().equals("N")) {
+	                    response.setContentType("text/html; charset=UTF-8");
+	                    PrintWriter out = response.getWriter();
+	                    out.println("<script>alert(' 권한이 존재하지않습니다.\\n 메인페이지로 이동합니다.'); location.href='/';</script>");
+	                    out.flush();
+	                    return false;
+	                }
 	
 	                ArrayList<List<Auth>> authAllSubSelect = (ArrayList<List<Auth>>) authService.authAllSubSelect(request); // 권한에 맞는 전체 리스트
 	                ReturnFunction returnFunction = new ReturnFunction();

@@ -7,6 +7,7 @@ import com.sound.door.Common.DataTransferObject.RESTful;
 import com.sound.door.Common.Interceptor.Session;
 //import com.sound.door.mesManager.Authority.DTO.SYSAuthProgram;
 //import com.sound.door.mesScm.InOut.DTO.SCM_IN_SUB;
+import com.sound.door.mesManager.Auth.DTO.SYSAuthProgram;
 
 import javax.management.StandardMBean;
 import javax.servlet.http.HttpServletRequest;
@@ -83,25 +84,24 @@ public class ReturnFunction {
      * @see     java.util.List
      * @see     com.sound.door.mesManager.Authority.DTO.SYSAuthProgram
      **/
-//    public Page setProgram(HttpServletRequest req, List<SYSAuthProgram> checkList)
-//    {
-//        Page p = new Page();
-//        p.setSite_code(getSessionData(req).getSite_code());
-//        p.setKeyword(checkList.get(0).getAuth_code());
-//
-//        String keyword2 = "";
-//        int index = 0;
-//        for (SYSAuthProgram svl : checkList) {
-//            if (index == 0) {
-//                keyword2 = svl.getMenu_code()+"/"+svl.getCheck_get()+"/"+svl.getCheck_add()+"/"+svl.getCheck_edit()+"/"+svl.getCheck_del();
-//            }else{
-//                keyword2 = keyword2+","+svl.getMenu_code()+"/"+svl.getCheck_get()+"/"+svl.getCheck_add()+"/"+svl.getCheck_edit()+"/"+svl.getCheck_del();
-//            }
-//            ++index;
-//        }
-//        p.setKeyword2(keyword2);
-//        return p;
-//    }
+    public Page setProgram(HttpServletRequest req, List<SYSAuthProgram> checkList)
+    {
+        Page p = new Page();
+        p.setKeyword(checkList.get(0).getAuth_code());
+
+        String keyword2 = "";
+        int index = 0;
+        for (SYSAuthProgram svl : checkList) {
+            if (index == 0) {
+                keyword2 = svl.getMenu_code()+"/"+svl.getCheck_get()+"/"+svl.getCheck_add()+"/"+svl.getCheck_edit()+"/"+svl.getCheck_del();
+            }else{
+                keyword2 = keyword2+","+svl.getMenu_code()+"/"+svl.getCheck_get()+"/"+svl.getCheck_add()+"/"+svl.getCheck_edit()+"/"+svl.getCheck_del();
+            }
+            ++index;
+        }
+        p.setKeyword2(keyword2);
+        return p;
+    }
 
     public Auth authMenu(HttpServletRequest req,ArrayList<List<Auth>> authAllSubSelect)
     {
