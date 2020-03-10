@@ -7,17 +7,19 @@
     <title>사운드 방음문 | MES</title>
     <th:block th:include="common/include-css"></th:block>
 </head>
+<th:block th:include="common/include-js">
+        <script src="js/ui.js"></script>
+</th:block>
+
 <body class="page-body">
     <div th:replace="common/common-header"></div>
     <div class="page-container">
         <div th:replace="common/common-sidebar"></div>
         <div class="main-content">
-            <div th:replace="content/home"></div>
+            <div th:replace="${template}"></div>
             <div th:replace="common/common-footer"></div>
         </div>
     </div>
 </body>
 </html>
-<th:block th:include="common/include-js">
-        <script src="js/ui.js"></script>
-</th:block>
+

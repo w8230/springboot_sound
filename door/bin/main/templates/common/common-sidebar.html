@@ -19,9 +19,76 @@
 					</a>
 				</div>
 			</header>
+			
+			
+			
+	<!-- 	        <c:forEach var="mainLeft_list" items="${left_list[0] }" varStatus="status">
+            <c:if test="${status.index != 0 }">
+                <li class="${top_active == mainLeft_list.menu_code ? 'active open' : ''}">
+                    <c:if test="${mainLeft_list.level != 1 }">
+                        <a href="javascript:void(0)" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-list-ul"></i>
+                            <span class="menu-text"> ${mainLeft_list.menu_name} </span>
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <c:forEach var="subLeft_list" items="${left_list[1]}">
+                                <c:if test="${mainLeft_list.menu_code == subLeft_list.parent_menu_code }">
+                                <c:if test="${mainLeft_list.menu_code == 'topBoard1'}">
+                                    <li class="${subLeft_list.menu_code } ${under_active == subLeft_list.menu_code ? 'active' : ''}" >
+                                        <a onclick="viewBoard('<c:out value="${subLeft_list.menu_code}"/>');">${subLeft_list.menu_name }</a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                </c:if>
+                                    <c:if test="${mainLeft_list.menu_code != 'topBoard1'}">
+                                        <li class="${subLeft_list.menu_code } ${under_active == subLeft_list.menu_code ? 'active' : ''}" >
+                                            <a href="${subLeft_list.menu_code }">${subLeft_list.menu_name }</a>
+                                            <b class="arrow"></b>
+                                        </li>
+                                    </c:if>
+                                </c:if>
+                            </c:forEach>
+                        </ul>
+                    </c:if>
+                </li>
+            </c:if>
+        </c:forEach>
+	 -->		
+	 
+	 	<ul id="main-menu" class="main-menu">	
+			<th:block th:each="mainLeft_list : ${left_list[0]}">
+				<th:block th:if="${mainLeft_listStat.index != 0}">
+			
+					<li  th:class="${top_active == mainLeft_list.menu_code ? 'active opened has-sub root-level' : 'has-sub root-level'}">
+						<th:block th:if="${mainLeft_list.level != 1 }">
+							<a href="javascript:void(0)">
+								<i class="fas fa-tachometer-alt"></i>
+								<span class="title" th:text="${mainLeft_list.menu_name}"></span>
+							</a>
+						</th:block>
+						<ul th:class="${top_active == mainLeft_list.menu_code ? 'visible' : ''}">
+							<th:block th:each="subLeft_list : ${left_list[1]}">
+								<th:block th:if="${mainLeft_list.menu_code == subLeft_list.parent_menu_code }">
+									<li th:class="${under_active == subLeft_list.menu_code ? 'active' : ''}">
+										<a th:href="${subLeft_list.menu_code }">
+											<span class="title" th:text="${subLeft_list.menu_name }"></span>
+										</a>
+									</li>
+								</th:block>
+							</th:block>
+							
+						</ul>
+					
+					</li>
+				</th:block>
+			</th:block>
+			
+		<!--  
 						
-			<ul id="main-menu" class="main-menu">
-				<li class="active opened active has-sub root-level">
+			
+				<li class="active opened has-sub root-level">
 					<a href="index.html">
 						<i class="fas fa-tachometer-alt"></i>
 						<span class="title">엑티브메뉴</span>
@@ -56,7 +123,7 @@
 						<i class="fas fa-tachometer-alt"></i>
 						<span class="title">일반메뉴</span>
 					</a>
-					<ul>
+					<ul >
 						<li>
 							<a href="layout-api.html">
 								<span class="title">123</span>
@@ -64,6 +131,13 @@
 						</li>
 					</ul>
 				</li>
+				
+				
+				
+				
+				-->	
+				
+				
 				<li class="has-sub root-level hidden-lg hidden-md">
 					<a href="layout-api.html">
 						<i class="fas fa-tachometer-alt"></i>
