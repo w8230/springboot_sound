@@ -8,7 +8,8 @@ var main_data = {
     check: 'I',
     send_data: {},
     readonly: ['auth_code'],
-    auth:{}
+    auth:{},
+    test:{}
 };
 
 ////////////////////////////시작 함수/////////////////////////////////////
