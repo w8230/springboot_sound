@@ -46,7 +46,6 @@ public class Handler extends HandlerInterceptorAdapter{
         lv.setUser_name("관리자");
    
         request.getSession().setAttribute("userData", lv);
-        
         Session sessionData = (Session) session.getAttribute("userData");
         
         

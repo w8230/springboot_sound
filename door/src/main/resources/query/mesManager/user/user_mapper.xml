@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sound.door.Mapper.mesManager.User.MesUserMapper">
+
+    <select id="sysDeptGet" resultType="com.sound.door.mesManager.User.DTO.SYS_DEPT_CD">
+        	EXEC SP_SYS_DEPT_GET  #{page}, #{rows}, '',''
+    </select>
+
+</mapper>

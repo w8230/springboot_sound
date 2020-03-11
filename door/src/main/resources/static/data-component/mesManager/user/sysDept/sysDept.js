@@ -6,8 +6,7 @@
 
 var main_data = {
     check: 'I',
-    send_data: {},
-    readonly: ['auth_code'],
+    readonly: ['dept_code'],
     auth:{}
 };
 
@@ -16,6 +15,7 @@ var main_data = {
 $(document).ready(function () {
     jqGrid_main(); // main 그리드 생성
     jqGridResize("#mes_grid" , $('#mes_grid').closest('[class*="col-"]')); //그리드 리 사이즈
+
     /*----모달----*/
     modal_start1(); // 모달1 시작 함수
     authcheck();
@@ -28,37 +28,35 @@ $(document).ready(function () {
 // 조회 버튼
 function get_btn(page) {
     $("#mes_grid").setGridParam({ // 그리드 조회
-        url: '/sysAuthGet',
+        url: '/sysDeptGet',
         datatype: "json",
-        page: page,
-        postData: main_data.send_data
+        page: page
     }).trigger("reloadGrid");
 }
 
 // 추가 버튼
 function add_btn() {
-    if (main_data.auth.check_add !="N"){
+    if (main_data.auth.check_add !="N") {
         modal_reset(".modal_value", main_data.readonly); // 해당 클래스 내용을 리셋 시켜줌 ,데이터에 readonly 사용할거
         main_data.check = 'I'; // 저장인지 체크
-        //$("#addDialog").dialog('open'); // 모달 열기
+        $("select[name=use_yn] option:eq(0)").prop("selected", true).trigger("change");
+
         $('#addDialog').modal('show', {backdrop: 'static', draggable: 'true'});
-        
     } else {
         alert("추가권한이 없습니다,");
     }
 }
 
-// 그리드 내용 더블 클릭 시 실행
+// 그리는 더블 클릭 시 발동
 function update_btn(jqgrid_data) {
     if (main_data.auth.check_edit !="N") {
         modal_reset(".modal_value", []); // 해당 클래스 내용을 리셋 시켜줌 ,데이터에 readonly 사용할거
 
         main_data.check = 'U'; // 수정인지 체크
-        jqgrid_data.dept_code = main_data.send_data.keyword; // 저장한데이터 dept_code 를 넣어 서 진행
-        ccn_ajax('/sysAuthOneGet', {keyword: jqgrid_data.auth_code}).then(function (data) { // user의 하나 출력
+
+        ccn_ajax('/sysDeptOneGet', {keyword: jqgrid_data.dept_code}).then(function (data) { // user의 하나 출력
             modal_edits('.modal_value', main_data.readonly, data); // response 값 출력
-            //$("#addDialog").dialog('open');
-            $('#addDialog').modal('show', {backdrop: 'static', draggable: 'true'});
+            $("#addDialog").dialog('open');
         });
     } else {
         alert("수정권한이 없습니다.");
@@ -76,7 +74,7 @@ function delete_btn() {
             if (confirm("삭제하겠습니까?")) {
                 main_data.check = 'D';
                 wrapWindowByMask2();
-                ccn_ajax("/sysAuthDelete", {keyword: ids.join(gu5)}).then(function (data) {
+                ccn_ajax("/sysDeptDelete", {keyword: ids.join(gu5)}).then(function (data) {
                     if (data.result === 'NG') {
                         alert(data.message);
                     } else {
@@ -92,28 +90,25 @@ function delete_btn() {
     } else {
         alert("삭제권한이 없습니다.");
     }
-
 }
 
 
 ////////////////////////////호출 함수/////////////////////////////////////
-
-
 function authcheck() {
-    ccn_ajax("/menuAuthGet", {keyword: "sysAuth"}).then(function (data) {
+    ccn_ajax("/menuAuthGet", {keyword: "sysDept"}).then(function (data) {
         main_data.auth = data;
     });
 }
-
 
 function jqGrid_main() {
     $("#mes_grid").jqGrid({
         datatype: "local",
         mtype: 'POST',
-        colNames : ['권한그룹코드','권한그룹명','등록자','등록일'],
+        colNames : ['부서코드','부서명','사용유무','등록자','등록일'],
         colModel : [
-            {name:'auth_code',index:'auth_code',key: true ,sortable: false,width:150,fixed: true},
-            {name:'auth_name',index:'auth_name',sortable: false,width:200,fixed: true},
+            {name:'dept_code',index:'dept_code',key: true ,sortable: false,width:100,fixed: true},
+            {name:'dept_name',index:'dept_name',sortable: false,width:200,fixed: true},
+            {name:'use_yn',index:'use_yn',sortable: false,width:100,fixed: true},
             {name:'user_name',index:'user_name',sortable: false,width:150,fixed: true},
             {name:'update_date',index:'update_date',formatter:formmatterDate,sortable: false,width:180,fixed: true}
         ],
@@ -121,6 +116,7 @@ function jqGrid_main() {
         autowidth: true,
         height: 600,
         pager: '#mes_grid_pager',
+        jsonReader: {cell: ""},
         rowNum: 100,
         rowList: [100, 200, 300, 400],
         viewrecords: true,
@@ -134,6 +130,7 @@ function jqGrid_main() {
         ondblClickRow: function (rowid, iRow, iCol, e) { // 더블 클릭시 수정 모달창
             var data = $('#mes_grid').jqGrid('getRowData', rowid);
             update_btn(data);
+
         },
         loadComplete:function(){
             if ($("#mes_grid").jqGrid('getGridParam', 'reccount') === 0)
