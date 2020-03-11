@@ -28,7 +28,7 @@ function addUdate_btn() {
                         get_btn($("#mes_grid").getGridParam('page'));
                     }
                 }
-                $("#addDialog").dialog('close');
+                $("#addDialog").modal("hide");
             }).catch(function (err) {
                 alert("저장실패");
             });

@@ -14,12 +14,21 @@
 						<div class="col-md-12 col-xs-12">
 							<table class="table table-condensed table-bordered table-striped">
 								<tr>
-									<th>권한그룹코드</th>
-									<td><input type="text" class="form-control input-sm modal_value" name="auth_code" placeholder="코드를 입력하세요."></td>
+									<th>부서코드</th>
+									<td><input type="text" class="form-control input-sm modal_value" name="dept_code" placeholder="코드를 입력하세요." autocomplete="off"></td>
 								</tr>
 								<tr>
-									<th>권한그룹명</th>
-									<td><input type="text" class="form-control input-sm modal_value" name="auth_name" placeholder="코드를 입력하세요."></td>
+									<th>부서명</th>
+									<td><input type="text" class="form-control input-sm modal_value" name="dept_name" placeholder="코드를 입력하세요." autocomplete="off"></td>
+								</tr>
+								<tr>
+									<th>사용유무</th>
+									<td>
+										<select class="form-control input-sm modal_value  ynCheck" id="use_yn" name="use_yn">
+											<option value="Y">Y</option>
+											<option value="N">N</option>
+										</select>
+									</td>
 								</tr>
 
 							</table>

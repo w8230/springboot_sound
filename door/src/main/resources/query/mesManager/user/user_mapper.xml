@@ -7,4 +7,16 @@
         	EXEC SP_SYS_DEPT_GET  #{page}, #{rows}, '',''
     </select>
 
+    <select id="sysDeptAdd" resultType="com.sound.door.Common.DataTransferObject.Message">
+    	EXEC SP_SYS_DEPT_ADD #{dept_code},#{dept_name},#{use_yn},#{user_code},#{keyword}
+    </select>
+
+    <select id="sysDeptOneGet" resultType="com.sound.door.mesManager.User.DTO.SYS_DEPT_CD">
+        	EXEC SP_SYS_DEPT_GET  1, 1, #{keyword},''
+    </select>
+
+    <select id="sysDeptDelete" resultType="com.sound.door.Common.DataTransferObject.Message">
+    	EXEC SP_SYS_DEPT_DEL #{keyword}
+    </select>
+
 </mapper>

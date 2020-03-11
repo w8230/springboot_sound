@@ -56,7 +56,7 @@ function update_btn(jqgrid_data) {
 
         ccn_ajax('/sysDeptOneGet', {keyword: jqgrid_data.dept_code}).then(function (data) { // user의 하나 출력
             modal_edits('.modal_value', main_data.readonly, data); // response 값 출력
-            $("#addDialog").dialog('open');
+            $('#addDialog').modal('show', {backdrop: 'static', draggable: 'true'});
         });
     } else {
         alert("수정권한이 없습니다.");
