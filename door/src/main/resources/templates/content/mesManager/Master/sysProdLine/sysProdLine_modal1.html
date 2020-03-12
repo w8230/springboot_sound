@@ -1,0 +1,50 @@
+
+	<script src="data-component/mesManager/master/sysProdLine/sysProdLine_modal1.js"></script>
+
+	<div class="modal fade in" id="addDialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">라인정보</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12 col-xs-12">
+							<table class="table table-condensed table-bordered table-striped">
+
+								<tr>
+									<th>부서</th>
+									<td><input type="text" class="form-control input-sm modal_value" name="dept_code" autocomplete="off"></td>
+								</tr>
+								<tr>
+									<th>라인 코드</th>
+									<td><input type="text" class="form-control input-sm modal_value" name="line_code" autocomplete="off"></td>
+								</tr>
+								<tr>
+									<th>라인 공정</th>
+									<td><input type="text" class="form-control input-sm modal_value" name="line_name" autocomplete="off"></td>
+								</tr>
+								<tr>
+									<th>코드</th>
+									<td><input type="text" class="form-control input-sm modal_value" name="line_char" autocomplete="off"></td>
+								</tr>
+								<tr>
+									<th>라인 적용</th>
+									<td>
+										<select class="form-control input-sm modal_value  ynCheck" id="line_type" name="line_type">
+											<option value="1">MAIN</option>
+											<option value="2">SUB</option>
+										</select>
+									</td>
+								</tr>
+
+
+							</table>
+						</div>
+
+					</div>
+					<div class="modal-footer"> <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">닫기</button>
+						<button type="button" class="btn btn-info btn-xs" onclick="addUdate_btn();">저장</button> </div>
+				</div>
+			</div>
+		</div>

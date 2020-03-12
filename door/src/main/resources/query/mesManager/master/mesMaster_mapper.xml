@@ -2,33 +2,72 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.sound.door.Mapper.mesManager.Master.MesMasterMapper">
+
+
     <!--메세지관리 -->
-    <!--메세지관리 그리드 리스트 조회 -->
     <select id="sysMsgGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_MSG_CD">
     	EXEC SP_SYS_MSG_GET #{page}, #{rows}, ''
     </select>
-
-    <!--메세지코드 추가 -->
     <select id="sysMsgAdd" resultType="com.sound.door.Common.DataTransferObject.Message">
     	EXEC SP_SYS_MSG_ADD #{msg_code},#{msg_name1},#{msg_name2},#{msg_name3},#{msg_name4},#{user_code},#{keyword}
     </select>
-
-    <!--메세지코드 수정 시 그리드에서 하나의 항목 값 조회 -->
     <select id="sysMsgOneGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_MSG_CD">
         EXEC SP_SYS_MSG_GET 1,1,#{keyword}
     </select>
-    <!--메세지코드 삭제 -->
     <select id="sysMsgDelete" resultType="com.sound.door.Common.DataTransferObject.Message">
     	EXEC SP_SYS_MSG_DEL #{keyword}
     </select>
 
 
+
     <!--게시판관리 -->
-    <!--게시판관리 그리드 리스트 조회 -->
     <select id="sysBoardGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_BOARD_CD">
         EXEC SP_SYS_BOARD_GET  #{page}, #{rows}, ''
     </select>
+    <select id="sysBoardAdd" resultType="com.sound.door.Common.DataTransferObject.Message">
+    	EXEC SP_SYS_BOARD_ADD #{board_code},#{board_en},#{board_kr},#{files},#{file_size},#{user_code},#{keyword}
+    </select>
+    <select id="sysBoardOneGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_BOARD_CD">
+        EXEC SP_SYS_BOARD_GET 1,1,#{keyword}
+    </select>
+    <select id="sysBoardDelete" resultType="com.sound.door.Common.DataTransferObject.Message">
+    	EXEC SP_SYS_BOARD_DEL #{keyword}
+    </select>
 
+
+
+
+    <!-- 창고관리 -->
+    <select id="sysCargoGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_CARGO_CD">
+    		EXEC SP_SYS_CARGO_GET #{page}, #{rows},'',''
+    </select>
+    <select id="sysCargoBAllGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_CARGO_CD">
+    		EXEC SP_SYS_CARGO_GET 0, 0,'','Y'
+    </select>
+    <select id="sysCargoAdd" resultType="com.sound.door.Common.DataTransferObject.Message">
+    	EXEC SP_SYS_CARGO_ADD #{cargo_code},#{cargo_name},#{use_yn},#{user_code},#{keyword}
+    </select>
+    <select id="sysCargoDelete" resultType="com.sound.door.Common.DataTransferObject.Message">
+    	EXEC SP_SYS_CARGO_DEL #{keyword}
+    </select>
+    <select id="sysCargoOneGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_CARGO_CD">
+    		EXEC SP_SYS_CARGO_GET 1, 1,#{keyword},''
+    </select>
+
+
+    <!-- 라인관리 -->
+    <select id="sysProdLineGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_LINE_CD">
+    	EXEC SP_SYS_LINE_GET #{page}, #{rows}, '','',''
+    </select>
+    <select id="sysProdLineAdd" resultType="com.sound.door.Common.DataTransferObject.Message">
+    	EXEC SP_SYS_LINE_ADD #{dept_code},#{line_code},#{line_name},#{line_char},#{line_type},#{user_code},#{keyword}
+    </select>
+    <select id="sysProdLineDelete" resultType="com.sound.door.Common.DataTransferObject.Message">
+    	EXEC SP_SYS_LINE_DEL #{keyword}
+    </select>
+    <select id="sysProdLineOneGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_LINE_CD">
+    	EXEC SP_SYS_LINE_GET 1,1, #{keyword},#{keyword2},''
+    </select>
 
 
 

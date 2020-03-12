@@ -19,6 +19,21 @@ public class MesMasterController {
         return "index";
     }
 
+    @RequestMapping(value = "/sysProdLine")
+    public String sysProdLine(Model model) {
+        model.addAttribute("template", "content/mesManager/Master/sysProdLine/sysProdLine");
+        return "index";
+    }
+
+    @RequestMapping(value = "/sysCargo")
+    public String sysCargo(Model model) {
+        model.addAttribute("template", "content/mesManager/Master/sysCargo/sysCargo");
+        return "index";
+    }
+
 
 
 }
+
+
+

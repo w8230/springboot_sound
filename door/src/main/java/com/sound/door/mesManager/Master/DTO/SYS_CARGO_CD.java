@@ -3,21 +3,19 @@ package com.sound.door.mesManager.Master.DTO;
 import lombok.Data;
 
 @Data
-public class SYS_BOARD_CD {
-
-    private String board_code;
-    private String board_en;
-    private String board_kr;
-    private String board_auth;
-    private String board_auth_name;
-    private int files;
-    private int file_size;
+public class SYS_CARGO_CD {
+    private String cargo_code;
+    private String cargo_name;
+    private String cargo_grp_code;
+    private String cargo_grp_name;
+    private String qty_yn;
     private String use_yn;
     private String user_code;
     private String create_date;
     private String update_date;
-    private int rownum;
     private String user_name;
+    private int rownum;
     private int rec_count;
     private String keyword;
+
 }
