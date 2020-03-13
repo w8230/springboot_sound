@@ -55,6 +55,7 @@ function update_btn(jqgrid_data) {
         main_data.check = 'U'; // 수정인지 체크
 
         ccn_ajax('/sysDeptOneGet', {keyword: jqgrid_data.dept_code}).then(function (data) { // user의 하나 출력
+            console.log(data);
             modal_edits('.modal_value', main_data.readonly, data); // response 값 출력
             $('#addDialog').modal('show', {backdrop: 'static', draggable: 'true'});
         });

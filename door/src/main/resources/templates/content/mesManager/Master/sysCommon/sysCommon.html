@@ -1,5 +1,5 @@
 
-<script src="data-component/mesManager/user/sysDept2/sysDept.js"></script>
+<script src="data-component/mesManager/master/sysCommon/sysCommon.js"></script>
 <div class="col-md-12 col-xs-12 breadcrumb1">
 	<div class="col-md-6 col-xs-6 hidden-xs">
 		<div>
@@ -25,6 +25,22 @@
 	</div>
 </div>
 
+<div class="row">
+<div class="col-md-12">
+	<table class="table table-condensed table-bordered table-striped">
+		<tr>
+			<th style="width:10%;">CODE1</th>
+			<td>
+				<select id="group_select" name="keyword" class="condition_main" style="width: 100%;">
+
+				</select>
+			</td>
+			<td class="hidden-xs hide-td" style="width:50%;"></td>
+			<td class="hidden-xs hide-td" style="width:50%;"></td>
+		</tr>
+	</table>
+</div>
+</div>
 
 <div class="btngrp">
 	<a href="javascript:;" class="btn btn-primary btn-xs" onclick="get_btn(1);">
@@ -44,5 +60,5 @@
 <table id="mes_grid"></table>
 <div id="mes_grid_pager"></div>
 
-<th:block th:include="content/mesManager/User/sysDept/sysDept_modal1"></th:block>
+<th:block th:include="content/mesManager/Master/sysCommon/sysCommon_modal1"></th:block>
 

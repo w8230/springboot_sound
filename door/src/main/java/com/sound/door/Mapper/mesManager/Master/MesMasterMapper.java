@@ -2,10 +2,7 @@ package com.sound.door.Mapper.mesManager.Master;
 
 import com.sound.door.Common.DataTransferObject.Message;
 import com.sound.door.Common.DataTransferObject.Page;
-import com.sound.door.mesManager.Master.DTO.SYS_BOARD_CD;
-import com.sound.door.mesManager.Master.DTO.SYS_CARGO_CD;
-import com.sound.door.mesManager.Master.DTO.SYS_LINE_CD;
-import com.sound.door.mesManager.Master.DTO.SYS_MSG_CD;
+import com.sound.door.mesManager.Master.DTO.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -30,7 +27,7 @@ public interface MesMasterMapper {
     SYS_BOARD_CD sysBoardOneGet(Page p);
     Message sysBoardDelete(Page p);
 
-    //창고관리
+    //창고관리-------------------------
     List<SYS_CARGO_CD> sysCargoGet(Page p);
     SYS_CARGO_CD sysCargoOneGet(Page p);
     Message sysCargoAdd(SYS_CARGO_CD scc);
@@ -38,11 +35,21 @@ public interface MesMasterMapper {
     List<SYS_CARGO_CD> sysCargoBAllGet(Page p);
 
 
-    //라인정보
+    //라인정보-------------------------
     SYS_LINE_CD sysProdLineOneGet(Page p);
     List<SYS_LINE_CD> sysProdLineGet(Page p);
     Message sysProdLineAdd(SYS_LINE_CD slc);
     Message sysProdLineDelete(Page p);
+
+
+
+
+    //공통관리-------------------------
+    List<SYS_COMMON_CD> sysCommonGroupAllGet();
+    List<SYS_LINE_CD> sysCommonGet(Page p);
+
+
+
 
 
 }

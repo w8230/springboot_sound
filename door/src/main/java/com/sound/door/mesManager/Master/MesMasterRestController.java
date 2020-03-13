@@ -3,10 +3,7 @@ package com.sound.door.mesManager.Master;
 import com.sound.door.Common.DataTransferObject.Message;
 import com.sound.door.Common.DataTransferObject.Page;
 import com.sound.door.Common.DataTransferObject.RESTful;
-import com.sound.door.mesManager.Master.DTO.SYS_BOARD_CD;
-import com.sound.door.mesManager.Master.DTO.SYS_CARGO_CD;
-import com.sound.door.mesManager.Master.DTO.SYS_LINE_CD;
-import com.sound.door.mesManager.Master.DTO.SYS_MSG_CD;
+import com.sound.door.mesManager.Master.DTO.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -103,6 +100,13 @@ public class MesMasterRestController {
     public List<SYS_CARGO_CD> sysCargoBAllGet(HttpServletRequest req, Page p){ return mesMasterSerivce.sysCargoBAllGet(req,p); }
 
 
+
+    //공통관리
+    @RequestMapping(value="/sysCommonGroupAllGet", method = RequestMethod.POST)
+    public List<SYS_COMMON_CD> sysCommonGroupAllGet(){ return mesMasterSerivce.sysCommonGroupAllGet(); }
+
+    @RequestMapping(value="/sysCommonGet", method = RequestMethod.POST)
+    public RESTful sysCommonGet(HttpServletRequest req, Page p){ return mesMasterSerivce.sysCommonGet(req, p); }
 
 
 }

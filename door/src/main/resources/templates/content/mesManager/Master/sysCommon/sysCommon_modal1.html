@@ -1,0 +1,77 @@
+
+	<script src="data-component/mesManager/master/sysCommon/sysCommon_modal1.js"></script>
+
+	<div class="modal fade in" id="addDialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">라인정보</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12 col-xs-12">
+							<table class="table table-condensed table-bordered table-striped">
+
+								<tr>
+									<th>코드그룹</th>
+									<td>
+										<input type="text" class="form-control input-sm modal_value" id="group_name" readonly name="cn" autocomplete="off">
+										<input type="hidden" class="form-control input-sm modal_value" id="group_code" name="code_type" autocomplete="off">
+									</td>
+								</tr>
+								<tr>
+									<th>코드</th>
+									<td><input type="text" class="form-control input-sm modal_value" name="code_value" autocomplete="off"></td>
+								</tr>
+								<tr>
+									<th>명칭1</th>
+									<td><input type="text" class="form-control input-sm modal_value" name="code_name1" autocomplete="off"></td>
+								</tr>
+								<tr>
+									<th>명칭2</th>
+									<td><input type="text" class="form-control input-sm modal_value" name="code_name2" autocomplete="off"></td>
+								</tr>
+								<tr>
+									<th>명칭3</th>
+									<td><input type="text" class="form-control input-sm modal_value" name="code_name3" autocomplete="off"></td>
+								</tr>
+								<tr>
+									<th>명칭4</th>
+									<td><input type="text" class="form-control input-sm modal_value" name="code_name4" autocomplete="off"></td>
+								</tr>
+								<tr>
+									<th>명칭5</th>
+									<td><input type="text" class="form-control input-sm modal_value" name="code_name5" autocomplete="off"></td>
+								</tr>
+								<tr>
+									<th>명칭6</th>
+									<td><input type="text" class="form-control input-sm modal_value" name="code_name6" autocomplete="off"></td>
+								</tr>
+								<tr>
+									<th>명칭7</th>
+									<td><input type="text" class="form-control input-sm modal_value" name="code_name7" autocomplete="off"></td>
+								</tr>
+								<tr>
+									<th>명칭8</th>
+									<td><input type="text" class="form-control input-sm modal_value" name="code_name8" autocomplete="off"></td>
+								</tr>
+
+								<tr>
+									<th>사용유무</th>
+									<td>
+										<select class="form-control input-sm modal_value  ynCheck" id="use_yn" name="use_yn">
+											<option value="Y">Y</option>
+											<option value="N">N</option>
+										</select>
+									</td>
+								</tr>
+
+							</table>
+						</div>
+
+					</div>
+					<div class="modal-footer"> <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">닫기</button>
+						<button type="button" class="btn btn-info btn-xs" onclick="addUdate_btn();">저장</button> </div>
+				</div>
+			</div>
+		</div>

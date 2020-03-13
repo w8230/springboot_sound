@@ -32,6 +32,12 @@ public class MesMasterController {
     }
 
 
+    @RequestMapping(value = "/sysCommon")
+    public String sysCommon(Model model) {
+        model.addAttribute("template", "content/mesManager/Master/sysCommon/sysCommon");
+        return "index";
+    }
+
 
 }
 

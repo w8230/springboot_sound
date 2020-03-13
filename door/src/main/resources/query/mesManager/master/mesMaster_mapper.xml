@@ -70,5 +70,15 @@
     </select>
 
 
+    <!-- 공통관리 -->
+    <select id="sysCommonGroupAllGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_COMMON_CD">
+    	EXEC SP_SYS_COMMON_GROUP_GET
+    </select>
+
+    <select id="sysCommonGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_COMMON_CD">
+    	 EXEC SP_SYS_COMMON_GET #{page},#{rows},#{keyword},'',#{keyword2}
+    </select>
+
+
 
 </mapper>

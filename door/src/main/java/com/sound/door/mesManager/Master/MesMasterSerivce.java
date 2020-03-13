@@ -5,10 +5,7 @@ import com.sound.door.Common.DataTransferObject.Page;
 import com.sound.door.Common.DataTransferObject.RESTful;
 import com.sound.door.Common.Function.ReturnFunction;
 import com.sound.door.Mapper.mesManager.Master.MesMasterMapper;
-import com.sound.door.mesManager.Master.DTO.SYS_BOARD_CD;
-import com.sound.door.mesManager.Master.DTO.SYS_CARGO_CD;
-import com.sound.door.mesManager.Master.DTO.SYS_LINE_CD;
-import com.sound.door.mesManager.Master.DTO.SYS_MSG_CD;
+import com.sound.door.mesManager.Master.DTO.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -46,11 +43,12 @@ public class MesMasterSerivce extends ReturnFunction {
         return mesMasterMapper.sysMsgDelete(p);
     }
 
+
+    //게시판관리
     public RESTful sysBoardGet(Page p, HttpServletRequest req) {
         List<SYS_BOARD_CD> rows = mesMasterMapper.sysBoardGet(p);
         return getListData(rows , p);
     }
-
 
     public Message sysBoardAdd(HttpServletRequest req, SYS_BOARD_CD sbc) {
         sbc.setUser_code(getSessionData(req).getUser_code());
@@ -67,27 +65,7 @@ public class MesMasterSerivce extends ReturnFunction {
     }
 
 
-
-
-
-
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
+    //창고관리
     public RESTful sysCargoGet(Page p, HttpServletRequest req) {
         List<SYS_CARGO_CD> rows = mesMasterMapper.sysCargoGet(p);
         return getListData(rows , p);
@@ -111,6 +89,7 @@ public class MesMasterSerivce extends ReturnFunction {
     }
 
 
+    //라인관리
     public SYS_LINE_CD sysProdLineOneGet(Page p, HttpServletRequest req) {
         return mesMasterMapper.sysProdLineOneGet(p);
     }
@@ -132,4 +111,21 @@ public class MesMasterSerivce extends ReturnFunction {
 
 
 
+
+    //공통관리
+    public List<SYS_COMMON_CD> sysCommonGroupAllGet() {
+        return mesMasterMapper.sysCommonGroupAllGet();
+    }
+
+
+    public RESTful sysCommonGet(HttpServletRequest req, Page p) {
+        List<SYS_LINE_CD> rows = mesMasterMapper.sysCommonGet(p);
+        return getListData(rows , p);
+    }
+
+
+
 }
+
+
+
