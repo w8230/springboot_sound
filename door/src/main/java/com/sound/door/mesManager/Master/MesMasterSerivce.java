@@ -124,7 +124,18 @@ public class MesMasterSerivce extends ReturnFunction {
     }
 
 
+    public SYS_COMMON_CD sysCommonOneGet(HttpServletRequest req, Page p) {
+        return mesMasterMapper.sysCommonOneGet(p);
+    }
 
+    public Message sysCommonAdd(HttpServletRequest req, SYS_COMMON_CD scc) {
+        scc.setUser_code(getSessionData(req).getUser_code());
+        return mesMasterMapper.sysCommonAdd(scc);
+    }
+
+    public Message sysCommonDelete(HttpServletRequest req, Page p) {
+        return mesMasterMapper.sysCommonDelete(p);
+    }
 }
 
 

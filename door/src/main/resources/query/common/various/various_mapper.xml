@@ -5,4 +5,12 @@
      <select id="menuAuthGet" resultType="com.sound.door.mesManager.Auth.DTO.SYSAuthProgram">
    		EXEC SP_SYS_AUTH_MENU_GET  #{keyword} ,#{user_code}
    </select>
+
+    <select id="sysDeptAllGet" resultType="com.sound.door.mesManager.User.DTO.SYS_DEPT_CD">
+    		EXEC SP_SYS_DEPT_GET  #{page}, #{rows}, '','Y'
+    </select>
+
+    <select id="sysCommonAllGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_COMMON_CD">
+        EXEC SP_SYS_COMMON_GET 0,0,#{keyword}, '','Y'
+    </select>
 </mapper>

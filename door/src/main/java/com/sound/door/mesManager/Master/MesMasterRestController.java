@@ -108,6 +108,20 @@ public class MesMasterRestController {
     @RequestMapping(value="/sysCommonGet", method = RequestMethod.POST)
     public RESTful sysCommonGet(HttpServletRequest req, Page p){ return mesMasterSerivce.sysCommonGet(req, p); }
 
+    @RequestMapping(value="/sysCommonOneGet", method = RequestMethod.POST)
+    public SYS_COMMON_CD sysCommonOneGet(HttpServletRequest req, Page p){ return mesMasterSerivce.sysCommonOneGet(req, p); }
+
+
+    @RequestMapping(value="/sysCommonAdd", method = RequestMethod.POST)
+    public Message sysCommonAdd(HttpServletRequest req, SYS_COMMON_CD scc) {
+        return mesMasterSerivce.sysCommonAdd(req, scc);
+    }
+
+    @RequestMapping(value="/sysCommonDelete", method = RequestMethod.POST)
+    public Message sysCommonDelete(HttpServletRequest req, Page p){
+        return mesMasterSerivce.sysCommonDelete(req,p);
+    }
+
 
 }
 

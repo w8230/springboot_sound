@@ -19,4 +19,20 @@
     	EXEC SP_SYS_DEPT_DEL #{keyword}
     </select>
 
+    <select id="sysUserGet" resultType="com.sound.door.mesManager.User.DTO.SYS_USER_CD">
+        	EXEC SP_SYS_USER_GET  #{page}, #{rows}, '','',''
+    </select>
+
+    <select id="sysUserAdd" resultType="com.sound.door.Common.DataTransferObject.Message">
+    	EXEC SP_SYS_USER_ADD #{user_code},#{user_name},#{dept_code},#{duty_code},#{auth_code},#{tel_no},#{email},#{use_yn},#{update_user},#{keyword}
+    </select>
+
+    <select id="sysUserOneGet" resultType="com.sound.door.mesManager.User.DTO.SYS_USER_CD">
+        	EXEC SP_SYS_USER_GET  1, 1, #{keyword},'',''
+    </select>
+
+    <select id="sysUserDelete" resultType="com.sound.door.Common.DataTransferObject.Message">
+    	EXEC SP_SYS_USER_DEL #{keyword}
+    </select>
+
 </mapper>

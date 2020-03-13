@@ -1,0 +1,75 @@
+
+	<script src="data-component/mesManager/user/sysUser/sysUser_modal1.js"></script>
+
+	<div class="modal fade in" id="addDialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">라인정보</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12 col-xs-12">
+							<table class="table table-condensed table-bordered table-striped">
+
+								<tr>
+									<th>사용자코드</th>
+									<td>
+										<input type="text" name="user_code" class="form-control modal_value" autocomplete="off">
+									</td>
+								</tr>
+								<tr>
+									<th>사용자명</th>
+									<td><input type="text" name="user_name" class="form-control modal_value" autocomplete="off"></td>
+								</tr>
+								<tr>
+									<th>부서</th>
+									<td>
+										<select name="dept_code" class="form-control modal_value" id="dept_select2" style="width: 100%;">
+
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>부서</th>
+									<td>
+										<select name="duty_code" class="form-control modal_value" id="duty_select" style="width: 100%;">
+
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>부서</th>
+									<td>
+										<select name="auth_code" class="form-control modal_value" id="auth_select" style="width: 100%;">
+
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>전화번호</th>
+									<td><input type="text" name="tel_no" class="form-control modal_value" onkeyup="num_keyup_under(this)"></td>
+								</tr>
+								<tr>
+									<th>이메일</th>
+									<td><input type="text" name="email" class="form-control modal_value" autocomplete="off"></td>
+								</tr>
+								<tr>
+									<th>사용유무</th>
+									<td>
+										<select class="form-control input-sm modal_value  ynCheck" id="use_yn" name="use_yn">
+											<option value="Y">Y</option>
+											<option value="N">N</option>
+										</select>
+									</td>
+								</tr>
+
+							</table>
+						</div>
+
+					</div>
+					<div class="modal-footer"> <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">닫기</button>
+						<button type="button" class="btn btn-info btn-xs" onclick="addUdate_btn();">저장</button> </div>
+				</div>
+			</div>
+		</div>

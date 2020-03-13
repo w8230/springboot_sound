@@ -81,8 +81,6 @@ function update_btn(jqgrid_data) {
 
         ccn_ajax('/sysCommonOneGet', send_data).then(function (data) {
             modal_edits('.modal_value', main_data.readonly, data); // response 값 출력
-            $('#group_name').val(data.cn); // 해당 id에 값을 부여
-            $('#group_code').val(data.code_type); // 해당 id에 값을 부여
             $('#addDialog').modal('show', {backdrop: 'static', draggable: 'true'});
         });
     } else {

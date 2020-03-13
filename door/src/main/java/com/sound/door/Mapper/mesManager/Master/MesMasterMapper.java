@@ -49,7 +49,9 @@ public interface MesMasterMapper {
     List<SYS_LINE_CD> sysCommonGet(Page p);
 
 
+    SYS_COMMON_CD sysCommonOneGet(Page p);
 
+    Message sysCommonAdd(SYS_COMMON_CD scc);
 
-
+    Message sysCommonDelete(Page p);
 }
