@@ -5,7 +5,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h4 class="modal-title">라인정보</h4>
+					<h4 class="modal-title">업체코드추가</h4>
 				</div>
 				<div class="modal-body">
 					<div class="row">
@@ -53,46 +53,70 @@
 									</td>
 								</tr>
 								<tr>
-									<th>코드</th>
-									<td><input type="text" class="form-control input-sm modal_value" name="code_value" autocomplete="off"></td>
+									<th>종목</th>
+									<td>
+										<input type="text" class="form-control input-sm modal_value" name="category" autocomplete="off">
+									</td>
+									<th>결제방법</th>
+									<td>
+										<input type="text" class="form-control input-sm modal_value" name="give_type" autocomplete="off">
+									</td>
 								</tr>
 								<tr>
-									<th>명칭1</th>
-									<td><input type="text" class="form-control input-sm modal_value" name="code_name1" autocomplete="off"></td>
+									<th>주소</th>
+									<td colspan="3">
+										<input type="text" class="form-control input-sm modal_value" name="address" autocomplete="off">
+									</td>
 								</tr>
 								<tr>
-									<th>명칭2</th>
-									<td><input type="text" class="form-control input-sm modal_value" name="code_name2" autocomplete="off"></td>
+									<th>담당자</th>
+									<td>
+										<input type="text" class="form-control input-sm modal_value" name="emp_name" autocomplete="off">
+									</td>
+									<th>담당자(전화)</th>
+									<td>
+										<input type="text" class="form-control input-sm modal_value" name="emp_tel" onkeyup="num_keyup_under(this)" autocomplete="off">
+									</td>
 								</tr>
 								<tr>
-									<th>명칭3</th>
-									<td><input type="text" class="form-control input-sm modal_value" name="code_name3" autocomplete="off"></td>
+									<th>고객사</th>
+									<td>
+										<select name="corp_type1" id="corp_type1" class="form-control input-sm modal_value" style="width:100%">
+											<option value="Y">Y</option>
+											<option value="N">N</option>
+										</select>
+									</td>
+									<th>협력사</th>
+									<td>
+										<select name="corp_type2" id="corp_type2" class="form-control input-sm modal_value" style="width:100%">
+											<option value="Y">Y</option>
+											<option value="N">N</option>
+										</select>
+									</td>
 								</tr>
 								<tr>
-									<th>명칭4</th>
-									<td><input type="text" class="form-control input-sm modal_value" name="code_name4" autocomplete="off"></td>
-								</tr>
-								<tr>
-									<th>명칭5</th>
-									<td><input type="text" class="form-control input-sm modal_value" name="code_name5" autocomplete="off"></td>
-								</tr>
-								<tr>
-									<th>명칭6</th>
-									<td><input type="text" class="form-control input-sm modal_value" name="code_name6" autocomplete="off"></td>
-								</tr>
-								<tr>
-									<th>명칭7</th>
-									<td><input type="text" class="form-control input-sm modal_value" name="code_name7" autocomplete="off"></td>
-								</tr>
-								<tr>
-									<th>명칭8</th>
-									<td><input type="text" class="form-control input-sm modal_value" name="code_name8" autocomplete="off"></td>
-								</tr>
+									<th>외주업체</th>
+									<td>
+										<select name="corp_type3" id="corp_type3" class="form-control input-sm modal_value" style="width:100%">
+											<option value="Y">Y</option>
+											<option value="N">N</option>
+										</select>
+									</td>
 
+									<th></th>
+									<td></td>
+
+								</tr>
+								</tr>
 								<tr>
+								<tr>
+									<th>이메일</th>
+									<td>
+										<input type="text" class="form-control input-sm modal_value" name="emp_email" autocomplete="off">
+									</td>
 									<th>사용유무</th>
 									<td>
-										<select class="form-control input-sm modal_value  ynCheck" id="use_yn" name="use_yn">
+										<select name="use_yn" id="use_yn" class="form-control input-sm modal_value" style="width:100%">
 											<option value="Y">Y</option>
 											<option value="N">N</option>
 										</select>

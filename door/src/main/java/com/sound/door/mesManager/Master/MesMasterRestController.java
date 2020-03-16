@@ -111,16 +111,30 @@ public class MesMasterRestController {
     @RequestMapping(value="/sysCommonOneGet", method = RequestMethod.POST)
     public SYS_COMMON_CD sysCommonOneGet(HttpServletRequest req, Page p){ return mesMasterSerivce.sysCommonOneGet(req, p); }
 
-
     @RequestMapping(value="/sysCommonAdd", method = RequestMethod.POST)
     public Message sysCommonAdd(HttpServletRequest req, SYS_COMMON_CD scc) {
-        return mesMasterSerivce.sysCommonAdd(req, scc);
-    }
+        return mesMasterSerivce.sysCommonAdd(req, scc);    }
 
     @RequestMapping(value="/sysCommonDelete", method = RequestMethod.POST)
     public Message sysCommonDelete(HttpServletRequest req, Page p){
         return mesMasterSerivce.sysCommonDelete(req,p);
     }
+
+
+
+    //업체코드관리
+    @RequestMapping(value="/sysSuppListGet", method = RequestMethod.POST)
+    public RESTful sysSuppListGet(HttpServletRequest req, Page p){ return mesMasterSerivce.sysSuppListGet(req, p); }
+
+    @RequestMapping(value="/sysSuppOneGet", method = RequestMethod.POST)
+    public SYS_SUPP_CD sysSuppOneGet(HttpServletRequest req, Page p) { return mesMasterSerivce.sysSuppOneGet(req,p); }
+
+    @RequestMapping(value="/sysSuppAdd", method = RequestMethod.POST)
+    public Message sysSuppAdd(HttpServletRequest req, SYS_SUPP_CD ssc) { return mesMasterSerivce.sysSuppAdd(req,ssc); }
+
+    @RequestMapping(value="/sysSuppListDel", method = RequestMethod.POST)
+    public Message sysSuppListDel(Page p) { return mesMasterSerivce.sysSuppListDel(p); }
+
 
 
 }

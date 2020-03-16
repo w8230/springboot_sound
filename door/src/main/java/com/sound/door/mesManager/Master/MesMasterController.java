@@ -39,12 +39,13 @@ public class MesMasterController {
     }
 
 
-
     @RequestMapping(value = "/sysSupp")
     public String sysSupp(Model model) {
         model.addAttribute("template", "content/mesManager/Master/sysSupp/sysSupp");
         return "index";
     }
+
+
 
 }
 

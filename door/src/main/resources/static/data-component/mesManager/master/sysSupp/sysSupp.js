@@ -27,11 +27,9 @@ $(document).ready(function () {
 
 
 ////////////////////////////클릭 함수//////////////////////////////////
-
 function get_btn(page) {
     main_data.send_data = value_return(".condition_main");
     main_data.send_data_post = main_data.send_data;
-    console.log(main_data.send_data);
     $("#mes_grid").setGridParam({
         url: '/sysSuppListGet',
         datatype: "json",
@@ -85,12 +83,11 @@ function update_btn(jqgrid_data) {
 
 function delete_btn() {
     if(main_data.auth.check_del != "N") {
-        var gu4 = String.fromCharCode(4);
+
         var gu5 = String.fromCharCode(5);
 
         var ids = $("#mes_grid").getGridParam('selarrrow');
-        var ids2 = {};
-        var list = [];
+
 
         if (ids.length === 0) {
             alert("삭제하는 데이터를 선택해주세요");
@@ -98,11 +95,8 @@ function delete_btn() {
             if (confirm("삭제하겠습니까?")) {
                 main_data.check = 'D';
                 wrapWindowByMask2();
-                for(var i=0;i<ids.length;i++){
-                    ids2 = $("#mes_grid").jqGrid('getRowData',ids[i]);
-                    list.push(ids2.site_code+gu4+ids2.supp_code);
-                }
-                ccn_ajax("/sysSuppListDel",{keyword: list.join(gu5)}).then(function (data) {
+
+                ccn_ajax("/sysSuppListDel",{keyword: ids.join(gu5)}).then(function (data) {
                     if (data.result === 'NG') {
                         alert(data.message);
                     } else {
@@ -135,9 +129,8 @@ function jqGrid_main() {
     $('#mes_grid').jqGrid({
         datatype: "local",
         mtype: 'POST',
-        colNames: ['sitecode','업체코드','업체명','대표자','업체명(영문)','사업자번호','전화번호','업태','팩스번호','종목','결재방법','주소','등록자','등록일'],
+        colNames: ['업체코드','업체명','대표자','업체명(영문)','사업자번호','전화번호','업태','팩스번호','종목','결재방법','주소','등록자','등록일'],
         colModel: [
-            {name: 'site_code',index:'site_code',hidden:true},
             {name: 'supp_code', index: 'supp_code',key:true, width: 150,fixed: true},
             {name: 'supp_name', index: 'supp_name', width: 200,fixed: true},
             {name: 'ceo', index: 'ceo', width: 200,fixed:true},

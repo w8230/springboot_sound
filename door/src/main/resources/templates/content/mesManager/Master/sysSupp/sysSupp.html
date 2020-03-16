@@ -19,7 +19,10 @@
 				<a href="#">관리자</a>
 			</li>
 			<li class="active">
-				권한그룹관리
+				마스터관리
+			</li>
+			<li class="active">
+				업체코드관리
 			</li>
 		</ol>
 	</div>
@@ -29,11 +32,15 @@
 <div class="col-md-12">
 	<table class="table table-condensed table-bordered table-striped">
 		<tr>
-			<th style="width:10%;">CODE1</th>
+			<th style="width:10%;">업체코드관리</th>
 			<td>
-				<select id="group_select" name="keyword" class="condition_main" style="width: 100%;">
-
+				<select name="keyword" id="gubun_select" class="condition_main" style="width:100%" >
+					<option value="CORP_TYPE1">고객사</option>
+					<option value="CORP_TYPE2">협력사</option>
+					<option value="CORP_TYPE3">외주업체</option>
 				</select>
+
+
 			</td>
 			<td class="hidden-xs hide-td" style="width:50%;"></td>
 			<td class="hidden-xs hide-td" style="width:50%;"></td>

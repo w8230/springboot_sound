@@ -47,11 +47,20 @@ public interface MesMasterMapper {
     //공통관리-------------------------
     List<SYS_COMMON_CD> sysCommonGroupAllGet();
     List<SYS_LINE_CD> sysCommonGet(Page p);
-
-
     SYS_COMMON_CD sysCommonOneGet(Page p);
-
     Message sysCommonAdd(SYS_COMMON_CD scc);
-
     Message sysCommonDelete(Page p);
+
+
+
+
+    //업체코드관리-------------------------
+    List<SYS_SUPP_CD> sysSuppListGet(Page p);
+    SYS_SUPP_CD sysSuppOneGet(Page p);
+    Message sysSuppAdd(SYS_SUPP_CD ssc);
+    Message sysSuppListDel(Page p);
+
 }
+
+
+

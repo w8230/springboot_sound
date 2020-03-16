@@ -53,23 +53,23 @@ public class ReturnFunction {
     public RESTful getListData(List<?> rows , Page p)
     {
         int count=0;
-        RESTful resTful = new RESTful();
-        try{
-            if(rows.size() != 0) {
-                for (Field field : rows.get(0).getClass().getDeclaredFields()){
-                    // private 접근해제
-                    field.setAccessible(true);
-                    if (field.getName().equals("rec_count")){
-                        // rows 데이터 개 수 저장
-                        count = (int) field.get(rows.get(0));
+            RESTful resTful = new RESTful();
+            try{
+                if(rows.size() != 0) {
+                    for (Field field : rows.get(0).getClass().getDeclaredFields()){
+                        // private 접근해제
+                        field.setAccessible(true);
+                        if (field.getName().equals("rec_count")){
+                            // rows 데이터 개 수 저장
+                            count = (int) field.get(rows.get(0));
+                        }
                     }
                 }
-            }
 
-            resTful.setTotal(CalcTotalPage(count,p.getRows()));
-            resTful.setRows(rows);
-            resTful.setPage(p.getPage());
-            resTful.setRecords(count);
+                resTful.setTotal(CalcTotalPage(count,p.getRows()));
+                resTful.setRows(rows);
+                resTful.setPage(p.getPage());
+                resTful.setRecords(count);
             return resTful;
         }catch (Exception e){
             e.printStackTrace();

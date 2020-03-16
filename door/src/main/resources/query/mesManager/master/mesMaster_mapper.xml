@@ -55,6 +55,8 @@
     </select>
 
 
+
+
     <!-- 라인관리 -->
     <select id="sysProdLineGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_LINE_CD">
     	EXEC SP_SYS_LINE_GET #{page}, #{rows}, '','',''
@@ -70,25 +72,46 @@
     </select>
 
 
+
+
     <!-- 공통관리 -->
     <select id="sysCommonGroupAllGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_COMMON_CD">
     	EXEC SP_SYS_COMMON_GROUP_GET
     </select>
-
     <select id="sysCommonGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_COMMON_CD">
     	 EXEC SP_SYS_COMMON_GET #{page},#{rows},#{keyword},'',#{keyword2}
     </select>
-
     <select id="sysCommonOneGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_COMMON_CD">
     	  EXEC SP_SYS_COMMON_GET 1,1,#{keyword},#{keyword2},''
     </select>
-
     <select id="sysCommonAdd" resultType="com.sound.door.Common.DataTransferObject.Message">
         EXEC SP_SYS_COMMON_ADD #{code_type},#{code_value},#{code_name1},#{code_name2},#{code_name3},#{code_name4},#{code_name5},#{code_name6},#{code_name7},#{code_name8},#{use_yn},#{user_code},#{keyword}
     </select>
-
     <select id="sysCommonDelete" resultType="com.sound.door.Common.DataTransferObject.Message">
         EXEC SP_SYS_COMMON_DEL #{keyword}
     </select>
 
+
+
+
+    <!-- 업체코드관리 -->
+    <select id="sysSuppListGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_SUPP_CD">
+        EXEC SP_SYS_SUPP_GET #{page},#{rows},#{keyword},'',''
+    </select>
+
+    <select id="sysSuppOneGet" resultType="com.sound.door.mesManager.Master.DTO.SYS_SUPP_CD">
+        EXEC SP_SYS_SUPP_GET 1,1,'',#{keyword},''
+    </select>
+
+    <select id="sysSuppAdd" resultType="com.sound.door.Common.DataTransferObject.Message">
+        EXEC SP_SYS_SUPP_ADD #{supp_code},#{supp_name},#{ceo},#{supp_name_en},#{supp_no},#{tel_no},#{buss_type},#{fax_no},#{category},#{give_type},#{address},#{emp_name},#{emp_tel},#{corp_type1},#{corp_type2},#{corp_type3},#{emp_email},#{use_yn},#{user_code},#{keyword}
+    </select>
+
+    <select id="sysSuppListDel" resultType="com.sound.door.Common.DataTransferObject.Message">
+        EXEC SP_SYS_SUPP_DEL #{keyword}
+    </select>
+
+
+
 </mapper>
+

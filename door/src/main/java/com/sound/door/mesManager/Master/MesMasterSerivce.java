@@ -136,6 +136,28 @@ public class MesMasterSerivce extends ReturnFunction {
     public Message sysCommonDelete(HttpServletRequest req, Page p) {
         return mesMasterMapper.sysCommonDelete(p);
     }
+
+
+
+    //업체코드관리
+    public RESTful sysSuppListGet(HttpServletRequest req, Page p) {
+        List<SYS_SUPP_CD> rows = mesMasterMapper.sysSuppListGet(p);
+        return getListData(rows , p);
+    }
+
+    public SYS_SUPP_CD sysSuppOneGet(HttpServletRequest req, Page p) {
+        return mesMasterMapper.sysSuppOneGet(p);
+    }
+
+
+    public Message sysSuppAdd(HttpServletRequest req, SYS_SUPP_CD ssc) {
+        ssc.setUser_code(getSessionData(req).getUser_code());
+        return mesMasterMapper.sysSuppAdd(ssc);
+    }
+
+    public Message sysSuppListDel(Page p) {
+        return mesMasterMapper.sysSuppListDel(p);
+    }
 }
 
 
