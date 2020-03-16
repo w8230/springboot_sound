@@ -12,6 +12,12 @@ public class MesUserController {
         return "index";
     }
 
+    @RequestMapping(value = "/sysUser")
+    public String sysUser(Model model) {
+        model.addAttribute("template", "content/mesManager/User/sysUser/sysUser");
+        return "index";
+    }
+
 
 
 

@@ -1,0 +1,64 @@
+
+<script src="data-component/mesManager/master/sysSupp/sysSupp.js"></script>
+<div class="col-md-12 col-xs-12 breadcrumb1">
+	<div class="col-md-6 col-xs-6 hidden-xs">
+		<div>
+			<img src="assets/images/72x72.png" class="iconimg">
+			<h2 class="pull-left">SOUND VISION | MES</h2>
+		</div>
+	</div>
+	<div class="col-md-6 col-xs-12">
+		<ol class="breadcrumb pull-right">
+			<li>
+				<a href="#">
+					<i class="entypo-home"></i>
+					홈
+				</a>
+			</li>
+			<li>
+				<a href="#">관리자</a>
+			</li>
+			<li class="active">
+				권한그룹관리
+			</li>
+		</ol>
+	</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+	<table class="table table-condensed table-bordered table-striped">
+		<tr>
+			<th style="width:10%;">CODE1</th>
+			<td>
+				<select id="group_select" name="keyword" class="condition_main" style="width: 100%;">
+
+				</select>
+			</td>
+			<td class="hidden-xs hide-td" style="width:50%;"></td>
+			<td class="hidden-xs hide-td" style="width:50%;"></td>
+		</tr>
+	</table>
+</div>
+</div>
+
+<div class="btngrp">
+	<a href="javascript:;" class="btn btn-primary btn-xs" onclick="get_btn(1);">
+		<i class="entypo-search"></i>
+		조회
+	</a>
+	<a href="javascript:;" onclick="add_btn();" class="btn btn-primary btn-xs">
+		<i class="entypo-plus"></i>
+		추가
+	</a>
+	<a href="javascript:;" class="btn btn-primary btn-xs" onclick="delete_btn();">
+		<i class="entypo-trash"></i>
+		삭제
+	</a>
+</div>
+
+<table id="mes_grid"></table>
+<div id="mes_grid_pager"></div>
+
+<th:block th:include="content/mesManager/Master/sysSupp/sysSupp_modal1"></th:block>
+

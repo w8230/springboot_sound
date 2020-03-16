@@ -38,9 +38,11 @@ public class MesMasterController {
         return "index";
     }
 
-    @RequestMapping(value = "/sysUser")
-    public String sysUser(Model model) {
-        model.addAttribute("template", "content/mesManager/User/sysUser/sysUser");
+
+
+    @RequestMapping(value = "/sysSupp")
+    public String sysSupp(Model model) {
+        model.addAttribute("template", "content/mesManager/Master/sysSupp/sysSupp");
         return "index";
     }
 
